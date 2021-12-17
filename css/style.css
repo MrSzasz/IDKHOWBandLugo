@@ -1053,26 +1053,6 @@
  /* ================================================  TOUR  ========================================================= */
  /* ================================================================================================================= */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
  .containerTour {
      height: min-content;
      width: 100%;
@@ -1086,138 +1066,127 @@
      background-size: cover;
      background-repeat: no-repeat;
      grid-column: 1/2;
-
- }
-
- .contentTour {
-     display: grid;
-     grid-template-columns: 10% 80% 10%;
      grid-column: 1/2;
  }
 
- .calendars {
-     height: 1000px;
+ .contentTour {
+     height: min-content;
      display: grid;
+     grid-template-columns: 10% 80% 10%;
+     grid-template-rows: min-content min-content;
+ }
+
+ .tourTitle {
+     grid-row: 1/2;
      grid-column: 2/3;
-     grid-template-rows: repeat(2, min-content);
-     gap: 6px;
+     margin: 10px 0 20px 0;
  }
 
- .calendars__layout {
-     height: 450px;
+ .tourDates {
+     grid-row: 2/3;
+     grid-column: 2/3;
      display: flex;
-     gap: 6px;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-     /* HAY QUE QUITARLO DESPUES */
-
-
-
-
-
-
-
-
+     flex-direction: column;
+     gap: 20px;
  }
 
- #calEnero {
-     flex-direction: row-reverse;
-     border-radius: 20px;
- }
-
- .calendars__sec__dates {
-     width: 75%;
-     overflow: hidden;
-     border-radius: 20px;
+ .tourInfo {
      display: flex;
+     align-items: center;
+     justify-content: space-between;
+     height: 80px;
+     transition: ease .20s all;
+     border-bottom: 2px solid #eeede8;
  }
 
- .calendars__sec__dates li {
-     padding: 10px;
-     list-style: none;
+ .tourInfo:hover {
+     border-left: 14px solid #EE2E2B;
+     background-color: rgba(35, 31, 32, 0.04);
  }
 
- .calendars__sec__dates li a {
-     text-decoration: none;
-     color: #312F32;
+ .tourInfo__links {
+     height: 100%;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     width: 100%;
  }
 
- .calendars__sec__img {
-     background-position: center;
-     background-size: cover;
-     background-repeat: no-repeat;
-     width: 25%;
-     overflow: hidden;
-     border-radius: 20px;
+ .tourInfo__links__text h3 {
+     font-size: 43px;
+     line-height: 30px;
+     letter-spacing: 4px;
+     padding-top: 10px;
+ }
+
+ .tourInfo__links__text {
+     font-size: 20px;
+     letter-spacing: 12px;
+ }
+
+ .tourInfo__links__btn button {
+     height: 60px;
+     width: 180px;
+     font-size: 25px;
+     color: #231F20;
+     border: 2px solid #231F20;
      box-shadow: 5px 5px 5px #231F20;
+     cursor: pointer;
+     transition: ease .20s all;
+     background-color: transparent;
  }
 
- #calEnero .calendars__sec__img {
-     background-image: url(../resources/tour/en.jpg);
+ .tourInfo__links__btn button:hover {
+     font-size: 26px;
+     background-color: #231F20;
+     color: #E8E7D5;
  }
-
- #calFeb .calendars__sec__img {
-     background-image: url(../resources/tour/feb.jpg);
-     display: flex;
-     flex-direction: row-reverse;
- }
-
-
-
-
-
-
-
-
-
-
-
 
  /* ================================================  MEDIA QUERIES  =============================================== */
 
- /* @media only screen and (max-width: 1020px) {}
+ @media only screen and (max-width: 1020px) {
+     .tourHeader {
+         margin-top: 50px;
+     }
+ }
 
- @media only screen and (max-width: 785px) {}
+ @media only screen and (max-width: 800px) {
+     .tourDates {
+         gap: 140px;
+         margin-bottom: 85px;
+     }
 
- @media only screen and (max-width: 350px) {} */
+     .tourInfo {
+         border: transparent;
+     }
 
+     .tourInfo__links {
+         flex-direction: column;
+         gap: 20px;
+     }
 
+     .tourInfo__links__text {
+         text-align: center;
+     }
 
+     .tourInfo__links__btn button {
+         width: 250px;
+     }
+ }
 
+ @media only screen and (max-width: 382px) {
+     .tourInfo__links__text h3 {
+         font-size: 33px;
+     }
 
+     .tourHeader {
+         margin-top: 90px;
+     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+     .tourDates {
+         margin-bottom: 125px;
+     }
+ }
 
 
  /* ================================================================================================================= */

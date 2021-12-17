@@ -31,30 +31,54 @@
             </nav>
         </header>
         <main class="contentContact">
-            <fieldset class="fieldset">
+            <fieldset class="contactForm">
                 <form class="form">
-                    <label for="name"></label>
-                    <input class="form__input" type="text" name="name" id="form__name" placeholder="Nombre">
-                    <label for="surname"></label>
-                    <input class="form__input" type="text" name="surname" id="form__surname" placeholder="Apellido">
-                    <label for="mail"></label>
-                    <input class="form__input" type="email" name="mail" id="form__mail" placeholder="Inserte su mail">
-                    <label for="age"></label>
-                    <input class="form__input" type="number" name="age" id="form__age" placeholder="--">
-                    <label for="subject"></label>
-                    <input type="text" name="subject" id="form__subject" placeholder="Asunto">
-                    <label for="text"></label>
+                    <label for="name">
+                        <h2>>NOMBRE</h2>
+                    </label>
+                    <input class="form__input" type="text" name="name" id="form__name"
+                        placeholder="Inserte su nombre"><br>
+                    <label for="surname">
+                        <h2>>APELLIDO</h2>
+                    </label>
+                    <input class="form__input" type="text" name="surname" id="form__surname"
+                        placeholder="Inserte su apellido"><br>
+                    <label for="mail">
+                        <h2>>MAIL</h2>
+                    </label>
+                    <input class="form__input" type="email" name="mail" id="form__mail"
+                        placeholder="Inserte su mail"><br>
+                    <label for="age">
+                        <h2>>EDAD</h2>
+                    </label>
+                    <input class="form__input" type="number" name="age" id="form__age" placeholder=""><br>
+                    <label for="subject">
+                        <h2>>ASUNTO</h2>
+                    </label>
+                    <input class="form__input" type="text" name="subject" id="form__subject"
+                        placeholder="Inserte el asunto"><br>
+                    <label for="text">
+                        <h2>>MENSAJE</h2>
+                    </label>
                     <textarea class="form__input" name="text" id="form__text" cols="30" rows="10"
-                        placeholder="Escriba aqui..."></textarea>
-                    <div class="form__input" id="form__chkbx">
-                        <label for="nl">Deseo recibir noticias</label>
-                        <input title="checkbox" type="checkbox" name="nl"><br>
-                    </div>
-                    <input class="form__input--bttn" type="reset" value="Borrar todo" id="form__reset">
-                    <input class="form__input--bttn" type="submit" value="Enviar" id="form__send">
+                        placeholder="Escriba aqui..."></textarea><br>
+                    <div class="checkContainer">
+                        <label for="check">
+                            <h2>>DESEO RECIBIR NOTICIAS</h2>
+                        </label>
+                        <input class="form__input" type="checkbox" name="check" id="form__check"></div>
+                    <input class="form__input--bttn" type="submit" value="ENVIAR" id="form__send">
                 </form>
             </fieldset>
-            <div class="social"></div>
+            <div class="contactSocial">
+                <a href="https://www.youtube.com/IDONTKNOWHOWBUTTHEYFOUNDME" class="contactSocial__icons iconYT"
+                    target="_blank" rel="noreferrer noopener"></a>
+                <a href="https://twitter.com/iDKHOW" class="contactSocial__icons iconTW" target="_blank"
+                    rel="noreferrer noopener"></a>
+                <a href="https://www.instagram.com/idkhow/" class="contactSocial__icons iconIG" target="_blank"
+                    rel="noreferrer noopener"></a>
+                <a href="https://www.facebook.com/IDKHOW/" class="contactSocial__icons iconFB"></a>
+            </div>
         </main>
         <footer class="footer">
             <h3>POWERED BY TELLEXX ©</h3>

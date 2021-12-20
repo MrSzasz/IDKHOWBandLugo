@@ -1,12 +1,26 @@
  /*  */
  @import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
 
+ @font-face {
+     font-family: logoFont;
+     src: url(../resources/fonts/helveticaBlack.otf);
+ }
+
+ @font-face {
+     font-family: VHSTitles;
+     src: url(../resources/fonts/VCR_OSD_MONO_1.001.ttf);
+ }
+
  * {
      margin: 0;
      padding: 0;
      box-sizing: border-box;
  }
 
+ ::selection {
+     background-color: #EE2E2B;
+     color: #E8E7D5;
+ }
 
  /* ================================================================================================================= */
  /* ==========================================  PROPIEDADES GENERALES  ============================================== */
@@ -26,8 +40,8 @@
  h1,
  h2,
  h3 {
-     font-family: 'Courier Prime', monospace;
-     font-size: 35px;
+     font-family: VHSTitles;
+     font-size: 30px;
      font-weight: 100;
      letter-spacing: 5px;
  }
@@ -67,6 +81,7 @@
      justify-content: space-between;
      padding: 0 20px 0 20px;
      grid-row: 1/2;
+     font-family: logoFont;
  }
 
  header img {
@@ -75,11 +90,15 @@
 
  .nav__links li {
      display: inline-block;
-     padding: 20px;
+     padding: 16px;
+     line-height: 100%;
+     text-transform: uppercase;
  }
 
  .nav__links a {
      position: relative;
+     letter-spacing: -2.6px;
+     font-size: 19.3px;
  }
 
  .nav__links a:after {
@@ -101,6 +120,10 @@
      transform-origin: bottom left;
  }
 
+ .nav__links span {
+     font-style: italic;
+ }
+
  i {
      font-size: 10px;
      padding: 0 0 0 3px;
@@ -108,7 +131,7 @@
 
  /* =======================================  MEDIA QUERIES  ==================================== */
 
- @media only screen and (max-width: 1020px) {
+ @media only screen and (max-width: 1035px) {
      header {
          padding: 0 3px 0 3px;
          flex-direction: column;
@@ -121,7 +144,7 @@
 
  }
 
- @media only screen and (max-width: 785px) {
+ @media only screen and (max-width: 795px) {
      .nav__links li {
          padding: 2px 12px 6px 12px;
      }
@@ -248,6 +271,10 @@
      gap: 20px;
      grid-column: 1/2;
      justify-content: center;
+ }
+
+ .contentBamd span {
+     font-family: VHSTitles;
  }
 
  .contentBamd__sec {
@@ -1116,7 +1143,7 @@
      cursor: pointer;
      transition: ease .20s all;
      background-color: transparent;
-     font-family: 'Courier Prime', monospace;
+     font-family: VHSTitles;
  }
 
  .tourInfo__links__btn button:hover {
@@ -1259,7 +1286,7 @@
      transition: ease .20s all;
      background-color: transparent;
      border-radius: 10px;
-     font-family: 'Courier Prime', monospace;
+     font-family: VHSTitles;
  }
 
  .form__input--bttn:hover {

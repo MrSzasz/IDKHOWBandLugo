@@ -90,7 +90,7 @@
 
  .nav__links li {
      display: inline-block;
-     padding: 16px;
+     padding: 15px;
      line-height: 100%;
      text-transform: uppercase;
  }
@@ -98,7 +98,7 @@
  .nav__links a {
      position: relative;
      letter-spacing: -2.6px;
-     font-size: 19.3px;
+     font-size: 18px;
  }
 
  .nav__links a:after {
@@ -1241,6 +1241,23 @@
      font-family: "courier-std", monospace;
      text-align: justify;
      letter-spacing: 3px;
+ }
+
+ /* ====================================  AUTOCOMPLETAR  ======================================= */
+
+ input:-webkit-autofill,
+ input:-webkit-autofill:hover,
+ input:-webkit-autofill:focus,
+ textarea:-webkit-autofill,
+ textarea:-webkit-autofill:hover,
+ textarea:-webkit-autofill:focus,
+ select:-webkit-autofill,
+ select:-webkit-autofill:hover,
+ select:-webkit-autofill:focus {
+     border: transparent;
+     -webkit-text-fill-color: #312F32;
+     -webkit-box-shadow: 0 0 0px 1000px #E8E7D5 inset;
+     transition: background-color 5000s ease-in-out 0s;
  }
 
  /* =======================================  TEXTO  ============================================ */

@@ -70,6 +70,74 @@
      right: 14px;
  }
 
+ .VHSLoading {
+     background-position: top;
+     background-size: cover;
+     background-repeat: no-repeat;
+     animation-name: loadAnim;
+     animation-duration: 1.76s;
+ }
+
+ @keyframes loadAnim {
+     0% {
+         background-image: url(../resources/anim/loading.gif);
+         z-index: 1000000000;
+         width: 100%;
+         height: 100%;
+         position: fixed;
+         left: 0;
+         top: 0;
+     }
+
+     99.9% {
+         width: 100%;
+         height: 100%;
+         z-index: 1000000000;
+         position: fixed;
+         background-image: url(../resources/anim/loading.gif);
+     }
+
+     100% {
+         width: 0px;
+         height: 0px;
+         z-index: 1;
+     }
+ }
+
+ .VHSPlay {
+     background-position: top;
+     background-size: cover;
+     background-repeat: no-repeat;
+     animation-name: playAnim;
+     animation-duration: 0.2s;
+ }
+
+ @keyframes playAnim {
+     0% {
+         background-image: url(../resources/anim/playbkg.gif);
+         z-index: 1000000000;
+         width: 100%;
+         height: 100%;
+         position: fixed;
+         left: 0;
+         top: 0;
+     }
+
+     99.9% {
+         width: 100%;
+         height: 100%;
+         z-index: 1000000000;
+         position: fixed;
+         background-image: url(../resources/anim/playbkg.gif);
+     }
+
+     100% {
+         width: 0px;
+         height: 0px;
+         z-index: 1;
+     }
+ }
+
 
  /* ================================================================================================================= */
  /* ===========================================  PROPIEDADES DEL HEADER  ============================================ */
@@ -98,7 +166,7 @@
  .nav__links a {
      position: relative;
      letter-spacing: -2.6px;
-     font-size: 18px;
+     font-size: 17px;
  }
 
  .nav__links a:after {
@@ -387,6 +455,40 @@
      color: #E8E7D5;
      background-color: #312F32;
      padding: 10px;
+ }
+
+ .whiteShadow {
+     background-position: top;
+     background-size: cover;
+     background-repeat: no-repeat;
+     animation-name: animWS;
+     animation-duration: 4s;
+ }
+
+ @keyframes animWS {
+     0% {
+         background-image: url(../resources/anim/init.gif);
+         z-index: 1000000000;
+         width: 100%;
+         height: 100%;
+         position: fixed;
+         left: 0;
+         top: 0;
+     }
+
+     99.9% {
+         width: 100%;
+         height: 100%;
+         z-index: 1000000000;
+         position: fixed;
+         background-image: url(../resources/anim/init.gif);
+     }
+
+     100% {
+         width: 0px;
+         height: 0px;
+         z-index: 1;
+     }
  }
 
  /* ================================================  MEDIA QUERIES  =============================================== */

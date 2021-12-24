@@ -236,85 +236,26 @@
  /* ===========================================  PROPIEDADES DEL HEADER  ============================================ */
  /* ================================================================================================================= */
 
- header {
-     display: flex;
-     align-items: center;
-     justify-content: space-between;
-     padding: 0 20px 0 20px;
-     grid-row: 1/2;
+ .navbar-brand img {
+     height: auto;
+     width: 170px;
+ }
+
+ .navbar-light .navbar-nav .nav-link {
+     color: #231F20;
      font-family: logoFont;
- }
-
- header img {
-     width: 200px;
- }
-
- .nav__links li {
-     display: inline-block;
-     padding: 15px;
-     line-height: 100%;
-     text-transform: uppercase;
- }
-
- .nav__links a {
-     position: relative;
-     letter-spacing: -2.6px;
      font-size: 17px;
  }
 
- .nav__links a:after {
-     content: '';
-     position: absolute;
-     width: 100%;
-     transform: scaleX(0);
-     height: 2px;
-     bottom: 0;
-     left: 0;
-     background-color: #EE2E2B;
-     transform-origin: bottom right;
-     transition: transform 0.25s ease-out;
+ .navbar-light .navbar-nav .nav-link i {
+     font-size: 14px;
  }
 
+ /* =========================================  BOTON  ========================================== */
 
- .nav__links a:hover:after {
-     transform: scaleX(1);
-     transform-origin: bottom left;
+ .navbar-toggler {
+     border: none;
  }
-
- .nav__links span {
-     font-style: italic;
- }
-
- i {
-     font-size: 10px;
-     padding: 0 0 0 3px;
- }
-
- /* =======================================  MEDIA QUERIES  ==================================== */
-
- @media only screen and (max-width: 1035px) {
-     header {
-         padding: 0 3px 0 3px;
-         flex-direction: column;
-         flex-wrap: no-wrap;
-     }
-
-     .nav__links {
-         text-align: center;
-     }
-
- }
-
- @media only screen and (max-width: 795px) {
-     .nav__links li {
-         padding: 2px 12px 6px 12px;
-     }
-
-     .nav__links {
-         padding-bottom: 12px
-     }
- }
-
 
  /* ================================================================================================================= */
  /* ===================================================  INDEX  ===================================================== */
@@ -357,61 +298,51 @@
  /* ========================================  GENERALES  ======================================= */
 
 
- .containerIndex {
-     height: min-content;
-     width: 100%;
-     display: grid;
-     grid-template-rows: min-content auto min-content;
+ .container-fluid {
+     height: 500px;
  }
 
- .contentIndex {
-     display: grid;
-     grid-template-rows: repeat(4, 500px min-content) 500px;
-     grid-template-columns: 10% 80% 10%;
-     grid-row: 2/3;
- }
-
- .contentIndex__img {
-     grid-column: 1/4;
+ .imgParallaxBst {
      background-position: center;
      background-size: cover;
      background-attachment: fixed;
      background-repeat: no-repeat;
  }
 
- .sec {
-     grid-column: 2/3;
-     padding: 10px 10px 50px 10px;
- }
-
  /* =========================================  HISTORIA  ======================================= */
 
- .imgHis {
+ .imgIndex1 {
      background-image: url(../resources/index/history.png);
  }
 
  /* ==========================================  GENERO  ======================================== */
 
- .imgGen {
+ .imgIndex2 {
      background-image: url(../resources/index/genre.png);
  }
 
  /* ========================================  INFLUENCIAS  ===================================== */
 
- .imgInf {
+ .imgIndex3 {
      background-image: url(../resources/index/influences.png);
  }
 
  /* =========================================  NOTICIAS  ======================================= */
 
- .imgNew {
+ .imgIndex4 {
      background-image: url(../resources/index/news.png);
  }
 
  /* ========================================  IMAGEN FINAL  ==================================== */
 
- .imgEnd {
+ .imgIndex5 {
      background-image: url(../resources/index/end.png);
+ }
+
+ /* ===========================================  TEXTO  ======================================== */
+
+ .textIndexBst {
+     height: min-content;
  }
 
  /* ===================================  PROPIEDADES DE TWITTER  =============================== */
@@ -423,20 +354,14 @@
 
  /* ================================================  MEDIA QUERIES  =============================================== */
 
- @media only screen and (max-width: 1020px) {
-     .contentIndex h2 {
-         font-size: 27px;
-     }
-
- }
 
  @media only screen and (max-width: 600px) {
 
-     .imgHis {
+     .imgIndex1 {
          background-image: url(../resources/index//responsive/history.png);
      }
 
-     .imgGen {
+     .imgIndex2 {
          background-image: url(../resources/index/responsive/genre.png);
      }
 
@@ -1596,13 +1521,6 @@
  /* ===============================================  FOOTER  ======================================================== */
  /* ================================================================================================================= */
 
- footer {
-     display: flex;
-     align-items: center;
-     justify-content: space-between;
-     padding: 15px 74px 10px 20px;
- }
-
  footer h3 {
      font-size: 14px;
  }
@@ -1610,4 +1528,8 @@
  footer img {
      height: 45px;
      width: auto;
+ }
+
+ .page-footer .d-flex a:hover {
+     color: #EE2E2B;
  }

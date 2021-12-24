@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
         integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -15,78 +17,149 @@
 
 <body>
     <div class="VHSPlay"></div>
-    <div class="containerContact" id="top">
-        <header class="header">
-            <a href="../index.html"><img src="../resources/index/logo.png" alt="logo"></a>
-            <nav class="nav">
-                <ul class="nav__links">
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="../pages/bamd.html">Bamd</a></li>
-                    <li><a href="../pages/discografia.html">Discografia</a></li>
-                    <li><a href="../pages/galeria.html">Galeria</a></li>
-                    <li><a href="../pages/tour.html">Tour</a></li>
-                    <li><a href="https://store.idkhow.com/" target="_blank" rel="noreferrer noopener">Merch<i
-                                class="fas fa-external-link-alt"></i> </a></li>
-                    <li><a href="#">Contacto</a></li>
-                </ul>
-            </nav>
-        </header>
-        <main class="contentContact">
-            <fieldset class="contactForm">
-                <form class="form">
-                    <label for="name">
-                        <h2>>NOMBRE</h2>
-                    </label>
-                    <input class="form__input" type="text" name="name" id="form__name"
-                        placeholder="Inserte su nombre"><br>
-                    <label for="surname">
-                        <h2>>APELLIDO</h2>
-                    </label>
-                    <input class="form__input" type="text" name="surname" id="form__surname"
-                        placeholder="Inserte su apellido"><br>
-                    <label for="mail">
-                        <h2>>MAIL</h2>
-                    </label>
-                    <input class="form__input" type="email" name="mail" id="form__mail"
-                        placeholder="Inserte su mail"><br>
-                    <label for="age">
-                        <h2>>EDAD</h2>
-                    </label>
-                    <input class="form__input" type="number" name="age" id="form__age" placeholder=""><br>
-                    <label for="subject">
-                        <h2>>ASUNTO</h2>
-                    </label>
-                    <input class="form__input" type="text" name="subject" id="form__subject"
-                        placeholder="Inserte el asunto"><br>
-                    <label for="text">
-                        <h2>>MENSAJE</h2>
-                    </label>
-                    <textarea class="form__input" name="text" id="form__text" cols="30" rows="10"
-                        placeholder="Escriba aqui..."></textarea><br>
-                    <div class="checkContainer">
-                        <label for="check">
-                            <h2>>DESEO RECIBIR NOTICIAS</h2>
-                        </label>
-                        <input class="form__input" type="checkbox" name="check" id="form__check"></div>
-                    <input class="form__input--bttn" type="submit" value="ENVIAR" id="form__send">
-                </form>
-            </fieldset>
-            <div class="contactSocial">
-                <a href="https://www.youtube.com/IDONTKNOWHOWBUTTHEYFOUNDME" class="contactSocial__icons iconYT"
-                    target="_blank" rel="noreferrer noopener"></a>
-                <a href="https://twitter.com/iDKHOW" class="contactSocial__icons iconTW" target="_blank"
-                    rel="noreferrer noopener"></a>
-                <a href="https://www.instagram.com/idkhow/" class="contactSocial__icons iconIG" target="_blank"
-                    rel="noreferrer noopener"></a>
-                <a href="https://www.facebook.com/IDKHOW/" class="contactSocial__icons iconFB"></a>
-            </div>
-        </main>
-        <footer class="footer">
-            <h3>POWERED BY TELLEXX ©</h3>
-            <a href=#top><img src="../resources/index/arrow.png" alt="go-top"></a>
-        </footer>
-    </div>
+
+    <!-- =====================================  NAV BAR  ====================================== -->
+
+    <nav class="navbar bg-transparent navbar-light">
+        <a class="navbar-brand" href="../index.html"><img src="../resources/index/logo.png" alt="logo"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="../pages/bamd.html">>BAMD</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../pages/discografia.html">>DISCOGRAFIA</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../pages/galeria.html">>GALERIA</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../pages/tour.html">>TOUR</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://store.idkhow.com/" target="_blank"
+                        rel="noreferrer noopener">>MERCH<i class="fas fa-external-link-alt"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">>CONTACTO</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <br>
+
+    <!-- ====================================  CONTENIDO  ===================================== -->
+
+
+    <!-- ======================================  FOOTER  ====================================== -->
+
+    <footer class="page-footer font-small blue pt-4">
+        <div class="d-flex justify-content-around align-items-center py-2">
+            <h3>POWERED BY TELLEXX ©</h3><a href=#top>
+                <h3>↑=IR ARRIBA=↑</h3>
+            </a>
+        </div>
+    </footer>
+
+    <!-- ===================================  ROTATING LOGO  ================================== -->
+
     <div class="idkhow"><img src="../resources/index/iDK1.webp" alt="spin"></div>
+
+    <!-- =====================================  BOOTSTRAP  ==================================== -->
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
+        integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous">
+    </script>
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <main class="contentContact">
+    <fieldset class="contactForm">
+        <form class="form">
+            <label for="name">
+                <h2>>NOMBRE</h2>
+            </label>
+            <input class="form__input" type="text" name="name" id="form__name"
+                placeholder="Inserte su nombre"><br>
+            <label for="surname">
+                <h2>>APELLIDO</h2>
+            </label>
+            <input class="form__input" type="text" name="surname" id="form__surname"
+                placeholder="Inserte su apellido"><br>
+            <label for="mail">
+                <h2>>MAIL</h2>
+            </label>
+            <input class="form__input" type="email" name="mail" id="form__mail"
+                placeholder="Inserte su mail"><br>
+            <label for="age">
+                <h2>>EDAD</h2>
+            </label>
+            <input class="form__input" type="number" name="age" id="form__age" placeholder=""><br>
+            <label for="subject">
+                <h2>>ASUNTO</h2>
+            </label>
+            <input class="form__input" type="text" name="subject" id="form__subject"
+                placeholder="Inserte el asunto"><br>
+            <label for="text">
+                <h2>>MENSAJE</h2>
+            </label>
+            <textarea class="form__input" name="text" id="form__text" cols="30" rows="10"
+                placeholder="Escriba aqui..."></textarea><br>
+            <div class="checkContainer">
+                <label for="check">
+                    <h2>>DESEO RECIBIR NOTICIAS</h2>
+                </label>
+                <input class="form__input" type="checkbox" name="check" id="form__check"></div>
+            <input class="form__input--bttn" type="submit" value="ENVIAR" id="form__send">
+        </form>
+    </fieldset>
+    <div class="contactSocial">
+        <a href="https://www.youtube.com/IDONTKNOWHOWBUTTHEYFOUNDME" class="contactSocial__icons iconYT"
+            target="_blank" rel="noreferrer noopener"></a>
+        <a href="https://twitter.com/iDKHOW" class="contactSocial__icons iconTW" target="_blank"
+            rel="noreferrer noopener"></a>
+        <a href="https://www.instagram.com/idkhow/" class="contactSocial__icons iconIG" target="_blank"
+            rel="noreferrer noopener"></a>
+        <a href="https://www.facebook.com/IDKHOW/" class="contactSocial__icons iconFB"></a>
+    </div>
+</main> -->

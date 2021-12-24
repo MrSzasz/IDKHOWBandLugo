@@ -1,105 +1,206 @@
 <!DOCTYPE html>
 <html lang="es">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
         integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="../css/style.css">
-        <link rel="shortcut icon" href="../resources/index/icon.png" type="image/x-icon">
-        <title>BAMD</title>
-    </head>
-    
-    <body>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="shortcut icon" href="../resources/index/icon.png" type="image/x-icon">
+    <title>BAMD</title>
+</head>
+
+<body>
     <div class="whiteShadow"></div>
-    <div class="containerBamd" id="top">
-        <header class="header">
-            <a href="../index.html"><img src="../resources/index/logo.png" alt="logo"></a>
-            <nav class="nav">
-                <ul class="nav__links">
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="#">Bamd</a></li>
-                    <li><a href="../pages/discografia.html">Discografia</a></li>
-                    <li><a href="../pages/galeria.html">Galeria</a></li>
-                    <li><a href="../pages/tour.html">Tour</a></li>
-                    <li><a href="https://store.idkhow.com/" target="_blank" rel="noreferrer noopener">Merch<i
-                        class="fas fa-external-link-alt"></i> </a></li>
-                        <li><a href="../pages/contacto.html">Contacto</a></li>
-                    </ul>
-                </nav>
-            </header>
-            <div class="bamdHeader"></div>
-            <main class="contentBamd">
-                <section class="contentBamd__sec" id="cardDallon">
-                    <div class="contentBamd__cardContainer">
-                        <div class="cardContainer__body">
-                            <div class="bodyFront"></div>
-                            <div class="bodyBack"></div>
-                        </div>
-                    </div>
-                    <div class="contentBamd__info">
-                        <h2>>DALLON WEEKES</h2>
-                        <p>
-                        <span>>EDAD:</span> 40 años<br>
-                        <span>>ROL:</span> voz, bajo, guitarra, piano, teclados.<br>
-                        
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet sapiente ipsa, corrupti
-                        veritatis modi obcaecati natus quisquam. Veniam exercitationem vero adipisci perferendis rem
-                        tempora magnam.
-                    </p>
-                </div>
-            </section>
-            <section class="contentBamd__sec" id="cardRyan">
-                <div class="contentBamd__cardContainer">
-                    <div class="cardContainer__body">
-                        <div class="bodyFront"></div>
-                        <div class="bodyBack"></div>
-                    </div>
-                </div>
-                <div class="contentBamd__info">
-                    <h2>>RYAN SEAMAN</h2>
-                    <p>
-                        <span>>EDAD:</span> 38 años<br>
-                        <span>>ROL:</span> batería, percusión, coros.<br>
-                        
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet sapiente ipsa, corrupti
-                        veritatis modi obcaecati natus quisquam. Veniam exercitationem vero adipisci perferendis rem
-                        tempora magnam.
-                    </p>
-                </div>
-            </section>
-            <section class="contentBamd__sec" id="cardUnknown">
-                <div class="contentBamd__cardContainer">
-                    <div class="cardContainer__body">
-                        <div class="bodyFront"></div>
-                        <div class="bodyBack"></div>
-                    </div>
-                </div>
-                <div class="contentBamd__info">
-                    <h2>>??????????</h2>
-                    <p>
-                        <span>>a;AB8-T:</span> ???????<br>
-                        <span>>[TGap#E:</span> ??????<br>
-                        
-                        kfhgaho3i4109y 51950915y90y5135912y41924u 2914 19u5 19y53901y53109y5 1951y -0258-19041 9-01 41u4
-                        -1y95y11-0591049=1294 1=-4 91=-v94=- v94=-1v 94=-19v4-=194194 1ig41j5blb'T]E]tpoiYT] ht]o3
-                        3ohpo5305705fjdkNB9yg
-                        35h5HLKWEBTG'LKtge0]9YG
-                    </p>
-                </div>
-            </section>
-        </main>
-        
-        
-        <footer class="footer">
-            <h3>POWERED BY TELLEXX ©</h3>
-            <a href=#top><img src="../resources/index/arrow.png" alt="go-top"></a>
-        </footer>
-    </div>
+
+    <!-- =====================================  NAV BAR  ====================================== -->
+
+    <nav class="navbar bg-transparent navbar-light">
+        <a class="navbar-brand" href="../index.html"><img src="../resources/index/logo.png" alt="logo"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">>BAMD</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../pages/discografia.html">>DISCOGRAFIA</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../pages/galeria.html">>GALERIA</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../pages/tour.html">>TOUR</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://store.idkhow.com/" target="_blank"
+                        rel="noreferrer noopener">>MERCH<i class="fas fa-external-link-alt"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../pages/contacto.html">>CONTACTO</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <br>
+
+    <!-- ====================================  CONTENIDO  ===================================== -->
+
+
+    <!-- ======================================  FOOTER  ====================================== -->
+
+    <footer class="page-footer font-small blue pt-4">
+        <div class="d-flex justify-content-around align-items-center py-2">
+            <h3>POWERED BY TELLEXX ©</h3><a href=#top>
+                <h3>↑=IR ARRIBA=↑</h3>
+            </a>
+        </div>
+    </footer>
+
+    <!-- ===================================  ROTATING LOGO  ================================== -->
+
     <div class="idkhow"><img src="../resources/index/iDK1.webp" alt="spin"></div>
+
+    <!-- =====================================  BOOTSTRAP  ==================================== -->
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
+        integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous">
+    </script>
+
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="containerBamd" id="top">
+    <header class="header">
+        <a href="../index.html"><img src="../resources/index/logo.png" alt="logo"></a>
+        <nav class="nav">
+            <ul class="nav__links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="#">Bamd</a></li>
+                <li><a href="../pages/discografia.html">Discografia</a></li>
+                <li><a href="../pages/galeria.html">Galeria</a></li>
+                <li><a href="../pages/tour.html">Tour</a></li>
+                <li><a href="https://store.idkhow.com/" target="_blank" rel="noreferrer noopener">Merch<i
+                            class="fas fa-external-link-alt"></i> </a></li>
+                <li><a href="../pages/contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="bamdHeader"></div>
+    <main class="contentBamd">
+        <section class="contentBamd__sec" id="cardDallon">
+            <div class="contentBamd__cardContainer">
+                <div class="cardContainer__body">
+                    <div class="bodyFront"></div>
+                    <div class="bodyBack"></div>
+                </div>
+            </div>
+            <div class="contentBamd__info">
+                <h2>>DALLON WEEKES</h2>
+                <p>
+                    <span>>EDAD:</span> 40 años<br>
+                    <span>>ROL:</span> voz, bajo, guitarra, piano, teclados.<br>
+
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet sapiente ipsa, corrupti
+                    veritatis modi obcaecati natus quisquam. Veniam exercitationem vero adipisci perferendis rem
+                    tempora magnam.
+                </p>
+            </div>
+        </section>
+        <section class="contentBamd__sec" id="cardRyan">
+            <div class="contentBamd__cardContainer">
+                <div class="cardContainer__body">
+                    <div class="bodyFront"></div>
+                    <div class="bodyBack"></div>
+                </div>
+            </div>
+            <div class="contentBamd__info">
+                <h2>>RYAN SEAMAN</h2>
+                <p>
+                    <span>>EDAD:</span> 38 años<br>
+                    <span>>ROL:</span> batería, percusión, coros.<br>
+
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet sapiente ipsa, corrupti
+                    veritatis modi obcaecati natus quisquam. Veniam exercitationem vero adipisci perferendis rem
+                    tempora magnam.
+                </p>
+            </div>
+        </section>
+        <section class="contentBamd__sec" id="cardUnknown">
+            <div class="contentBamd__cardContainer">
+                <div class="cardContainer__body">
+                    <div class="bodyFront"></div>
+                    <div class="bodyBack"></div>
+                </div>
+            </div>
+            <div class="contentBamd__info">
+                <h2>>??????????</h2>
+                <p>
+                    <span>>a;AB8-T:</span> ???????<br>
+                    <span>>[TGap#E:</span> ??????<br>
+
+                    kfhgaho3i4109y 51950915y90y5135912y41924u 2914 19u5 19y53901y53109y5 1951y -0258-19041 9-01 41u4
+                    -1y95y11-0591049=1294 1=-4 91=-v94=- v94=-1v 94=-19v4-=194194 1ig41j5blb'T]E]tpoiYT] ht]o3
+                    3ohpo5305705fjdkNB9yg
+                    35h5HLKWEBTG'LKtge0]9YG
+                </p>
+            </div>
+        </section>
+    </main>
+
+
+    <footer class="footer">
+        <h3>POWERED BY TELLEXX ©</h3>
+        <a href=#top><img src="../resources/index/arrow.png" alt="go-top"></a>
+    </footer>
+</div> -->

@@ -11,6 +11,11 @@
      src: url(../resources/fonts/VCR_OSD_MONO_1.001.ttf);
  }
 
+ @font-face {
+     font-family: LightsGoDown;
+     src: url(../resources/fonts/bookmaniaBlack.ttf);
+ }
+
  * {
      margin: 0;
      padding: 0;
@@ -61,6 +66,8 @@
      text-decoration: none;
  }
 
+ /* =====================================  ROTATING LOGO  ====================================== */
+
  .idkhow img {
      height: 50px;
      width: auto;
@@ -68,41 +75,37 @@
      z-index: 10;
      bottom: 1px;
      right: 14px;
+     animation-name: spin;
+     animation-duration: 6s;
+     animation-timing-function: linear;
  }
 
- .VHSLoading {
-     background-position: top;
-     background-size: cover;
-     background-repeat: no-repeat;
-     animation-name: loadAnim;
-     animation-duration: 1.76s;
- }
-
- @keyframes loadAnim {
+ @keyframes spin {
      0% {
-         background-image: url(../resources/anim/loading.gif);
-         z-index: 1000000000;
-         width: 100%;
-         height: 100%;
-         position: fixed;
-         left: 0;
-         top: 0;
+         bottom: 1px;
+         right: -120px;
      }
 
-     99.9% {
-         width: 100%;
-         height: 100%;
-         z-index: 1000000000;
-         position: fixed;
-         background-image: url(../resources/anim/loading.gif);
+     89.9% {
+         bottom: 1px;
+         right: 14px;
+     }
+
+     90% {
+         transform: scale(1);
+     }
+
+     95% {
+         transform: scale(2);
      }
 
      100% {
-         width: 0px;
-         height: 0px;
-         z-index: 1;
+         bottom: 1px;
+         right: 14px;
      }
  }
+
+ /* ======================================  GENERAL LOADING  =================================== */
 
  .VHSPlay {
      background-position: top;
@@ -136,6 +139,96 @@
          height: 0px;
          z-index: 1;
      }
+ }
+
+ /* =====================================  LIGHTS GO DOWN  ===================================== */
+
+ .LGD {
+     top: -100vh;
+     display: flex;
+     position: fixed;
+     z-index: 10000;
+     color: #FFD630;
+     width: 100%;
+     height: 100vh;
+     background-image: url(../resources/anim/LGD.gif);
+     align-items: center;
+     justify-content: center;
+     transition: all linear 5s;
+ }
+
+ .LGD h3 {
+     color: #fff;
+     text-shadow:
+         0 0 7px #fff,
+         0 0 10px #fff,
+         0 0 21px #fff,
+         0 0 42px #fffb00,
+         0 0 82px #fffb00,
+         0 0 92px #fffb00,
+         0 0 102px #fffb00,
+         0 0 151px #fffb00;
+     animation-name: pulse;
+     animation-duration: 1.5s;
+     animation-iteration-count: infinite;
+     animation-direction: alternate;
+ }
+
+ @keyframes pulse {
+     100% {
+         text-shadow:
+             0 0 4px #fff,
+             0 0 11px #fff,
+             0 0 19px #fff,
+             0 0 40px #fffb00,
+             0 0 80px #fffb00,
+             0 0 90px #fffb00,
+             0 0 100px #fffb00,
+             0 0 150px #fffb00;
+     }
+
+     0% {
+         text-shadow:
+             0 0 2px #fff,
+             0 0 4px #fff,
+             0 0 6px #fff,
+             0 0 10px #fffb00,
+             0 0 45px #fffb00,
+             0 0 55px #fffb00,
+             0 0 70px #fffb00,
+             0 0 80px #fffb00;
+     }
+ }
+
+ .LGD__hang {
+     top: 0;
+     height: 150px;
+     width: 100%;
+     background-image: url(../resources/anim/hang.png);
+     background-size: contain;
+     position: absolute;
+ }
+
+ .lightbulb {
+     top: 16px;
+     position: absolute;
+     height: 25px;
+     width: 25px;
+     background-image: url(../resources/anim/lightbult.svg);
+     background-repeat: no-repeat;
+     background-position: center;
+     background-size: contain;
+     cursor: pointer;
+     z-index: 100000;
+     transition: ease all 0.3s;
+ }
+
+ .lightbulb:active {
+     background-image: url(../resources/anim/lightbultOn.svg);
+ }
+
+ .lightbulb:active~.LGD {
+     top: 0vh;
  }
 
 
@@ -222,9 +315,47 @@
      }
  }
 
+
  /* ================================================================================================================= */
  /* ===================================================  INDEX  ===================================================== */
  /* ================================================================================================================= */
+
+ .VHSLoading {
+     background-position: top;
+     background-size: cover;
+     background-repeat: no-repeat;
+     animation-name: loadAnim;
+     animation-duration: 1.76s;
+ }
+
+ @keyframes loadAnim {
+     0% {
+         background-image: url(../resources/anim/loading.gif);
+         z-index: 1000000000;
+         width: 100%;
+         height: 100%;
+         position: fixed;
+         left: 0;
+         top: 0;
+     }
+
+     99.9% {
+         width: 100%;
+         height: 100%;
+         z-index: 1000000000;
+         position: fixed;
+         background-image: url(../resources/anim/loading.gif);
+     }
+
+     100% {
+         width: 0px;
+         height: 0px;
+         z-index: 1;
+     }
+ }
+
+ /* ========================================  GENERALES  ======================================= */
+
 
  .containerIndex {
      height: min-content;

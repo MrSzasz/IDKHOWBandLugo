@@ -866,50 +866,29 @@
  /* =================================================  CONTACTO  ==================================================== */
  /* ================================================================================================================= */
 
- .containerContact {
-     height: min-content;
-     width: 100%;
-     display: grid;
-     grid-template-rows: min-content auto min-content;
- }
-
- .contentContact {
-     display: grid;
-     height: min-content;
-     width: 100%;
-     grid-template-columns: auto 350px auto;
-     grid-template-rows: auto 90px;
+ .formB {
      background-image: url(../resources/contact/background.png);
-     background-size: cover;
      background-position: center;
+     background-size: cover;
      background-repeat: no-repeat;
- }
-
- .contactForm {
-     display: flex;
-     grid-column: 2/3;
-     background-color: #E8E7D5;
-     align-items: center;
-     justify-content: center;
-     flex-direction: column;
-     padding: 15px;
-     border: none;
-     margin-top: 25px;
- }
-
- /* ======================================  FORMULARIO  ======================================== */
-
- .form {
-     display: flex;
-     flex-direction: column;
      height: min-content;
  }
 
- .form h2 {
-     font-size: 25px;
+ .formB .container {
+     background-color: #E8E7D5;
+     height: min-content;
  }
 
- .form__input {
+ .formB .container label {
+     background-color: #E8E7D5;
+     width: 100%;
+ }
+
+ .formB .container h2 {
+     font-size: 23px;
+ }
+
+ .form-control {
      width: 100%;
      height: 40px;
      font-size: 18px;
@@ -938,43 +917,12 @@
      transition: background-color 5000s ease-in-out 0s;
  }
 
- /* =======================================  TEXTO  ============================================ */
-
- #form__text {
-     height: 150px;
- }
-
- /* ======================================  CHECKBOX  ========================================== */
-
- .checkContainer {
-     width: 100%;
-     height: 100%;
-     display: flex;
-     gap: 6px;
-     margin-bottom: 20px;
- }
-
- .checkContainer h2 {
-     font-size: 16px;
-     width: 100%;
- }
-
- #form__check {
-     width: 40px;
-     height: 30px;
- }
-
- .chkbox h2 {
-     font-size: 16px;
- }
-
  /* ====================================  BOTON ENVIAR  ======================================== */
 
- .form__input--bttn {
+ .btnB {
      width: 100%;
      height: 40px;
-     font-size: 25px;
-     color: #231F20;
+     font-size: 20px;
      border: 2px solid #231F20;
      box-shadow: 5px 5px 5px #231F20;
      cursor: pointer;
@@ -982,58 +930,25 @@
      background-color: transparent;
      border-radius: 10px;
      font-family: VHSTitles;
+     line-height: 0;
  }
 
- .form__input--bttn:hover {
-     font-size: 26px;
+ .btnB:hover {
+     font-size: 21px;
      background-color: #231F20;
      color: #E8E7D5;
  }
 
  /* ========================================  REDES  =========================================== */
 
- .contactSocial {
-     height: min-content;
-     display: flex;
-     flex-direction: row;
-     align-content: center;
-     justify-content: space-evenly;
-     background-color: #E8E7D5;
-     grid-column: 2/3;
-     grid-row: 2/3;
-     padding: 20px 0 10px 0;
- }
-
- .contactSocial__icons {
+ .redesB img {
      height: 35px;
      width: 35px;
-     background-position: center;
-     background-size: cover;
-     background-repeat: no-repeat;
+     cursor: pointer;
  }
 
- /* =======================================  YOUTUBE  ========================================== */
-
- .iconYT {
-     background-image: url(../resources/contact/social/yt.png);
- }
-
- /* =======================================  TWITTER  ========================================== */
-
- .iconTW {
-     background-image: url(../resources/contact/social/tw.png);
- }
-
- /* ======================================  INSTAGRAM  ========================================= */
-
- .iconIG {
-     background-image: url(../resources/contact/social/ig.png);
- }
-
- /* =======================================  FACEBOOK  ========================================= */
-
- .iconFB {
-     background-image: url(../resources/contact/social/fb.png);
+ .redesB {
+     height: min-content;
  }
 
 

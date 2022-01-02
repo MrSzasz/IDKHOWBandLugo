@@ -376,11 +376,17 @@
  /* ==================================================  BAMD  ======================================================= */
  /* ================================================================================================================= */
 
+
+
+ .bamdbody .navbar{
+     width: 100vw; !important
+ }
+
  .containerBamd {
      height: min-content;
      width: 100%;
      display: grid;
-     grid-template-rows: min-content 500px auto min-content;
+     grid-template-rows: 500px min-content;
  }
 
  .bamdHeader {
@@ -393,6 +399,7 @@
  }
 
  .contentBamd {
+     width: 100%;
      display: grid;
      grid-template-rows: repeat(3, auto);
      grid-template-columns: 10% 80% 10%;

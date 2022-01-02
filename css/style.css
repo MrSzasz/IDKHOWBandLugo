@@ -378,8 +378,9 @@
 
 
 
- .bamdbody .navbar{
-     width: 100vw; !important
+ .bamdbody .navbar {
+     width: 100vw;
+      !important
  }
 
  .containerBamd {
@@ -835,18 +836,6 @@
 
  /* =========================================  LISTA  ========================================== */
 
- .list-hover {
-     transition: ease all .25s;
-     background-color: transparent;
-     border: none;
-     border-bottom: 2px solid #eeede8;
- }
-
- .list-hover:hover {
-     border-left: #EE2E2B 10px solid;
-     background-color: #E8E7D5;
- }
-
  .align-items-center .card {
      background-color: #E8E7D5;
      border: none;
@@ -854,6 +843,40 @@
 
  .align-items-center .card .card-header {
      background-color: #E8E7D5;
+ }
+
+ .tourInfo {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     height: min-content;
+     transition: ease .20s all;
+     border-bottom: 2px solid #eeede8;
+ }
+
+ .tourInfo:hover {
+     border-left: 14px solid #EE2E2B;
+     background-color: rgba(35, 31, 32, 0.04);
+ }
+
+ .tourInfo__links {
+     height: 100%;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     width: 100%;
+ }
+
+ .tourInfo__links__text h3 {
+     font-size: 43px;
+     line-height: 30px;
+     letter-spacing: 4px;
+     padding-top: 10px;
+ }
+
+ .tourInfo__links__text {
+     font-size: 20px;
+     letter-spacing: 12px;
  }
 
  /* =========================================  TEXTO  ========================================== */
@@ -874,6 +897,61 @@
  .list-group-item-action {
      color: #312F32;
  }
+
+ /* =========================================  BOTON  ========================================== */
+
+ .tourInfo__links__btn button {
+     height: 60px;
+     width: 180px;
+     font-size: 25px;
+     color: #231F20;
+     border: 2px solid #231F20;
+     box-shadow: 5px 5px 5px #231F20;
+     cursor: pointer;
+     transition: ease .20s all;
+     background-color: transparent;
+     font-family: VHSTitles;
+ }
+
+ .tourInfo__links__btn button:hover {
+     font-size: 26px;
+     background-color: #231F20;
+     color: #E8E7D5;
+ }
+
+ /* ================================================  MEDIA QUERIES  =============================================== */
+
+ @media only screen and (max-width: 800px) {
+
+     .tourInfo {
+         border: transparent;
+     }
+
+     .tourInfo__links {
+         flex-direction: column;
+         gap: 20px;
+     }
+
+     .tourInfo__links__text {
+         text-align: center;
+     }
+
+     .tourInfo__links__btn button {
+         width: 250px;
+     }
+ }
+
+ @media only screen and (max-width: 382px) {
+     .tourInfo__links__text h3 {
+         font-size: 33px;
+     }
+ }
+
+ a:hover {
+     color: #231F20;
+     text-decoration: none
+ }
+
 
  /* ================================================================================================================= */
  /* =================================================  CONTACTO  ==================================================== */

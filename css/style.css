@@ -27,6 +27,7 @@
      color: #E8E7D5;
  }
 
+
  /* ================================================================================================================= */
  /* ==========================================  PROPIEDADES GENERALES  ============================================== */
  /* ================================================================================================================= */
@@ -210,7 +211,7 @@
  }
 
  .lightbulb {
-     top: 16px;
+     top: 24px;
      position: absolute;
      height: 25px;
      width: 25px;
@@ -316,31 +317,31 @@
  /* =========================================  HISTORIA  ======================================= */
 
  .imgIndex1 {
-     background-image: url(../resources/index/history.png);
+     background-image: url("https://i.imgur.com/Bb3tWiH.jpg");
  }
 
  /* ==========================================  GENERO  ======================================== */
 
  .imgIndex2 {
-     background-image: url(../resources/index/genre.png);
+     background-image: url("https://i.imgur.com/OYppIar.jpg");
  }
 
  /* ========================================  INFLUENCIAS  ===================================== */
 
  .imgIndex3 {
-     background-image: url(../resources/index/influences.png);
+     background-image: url("https://i.imgur.com/sIFwDC5.png");
  }
 
  /* =========================================  NOTICIAS  ======================================= */
 
  .imgIndex4 {
-     background-image: url(../resources/index/news.png);
+     background-image: url("https://i.imgur.com/WGd6eBW.png");
  }
 
  /* ========================================  IMAGEN FINAL  ==================================== */
 
  .imgIndex5 {
-     background-image: url(../resources/index/end.png);
+     background-image: url("https://i.imgur.com/Iiw4roH.png");
  }
 
  /* ===========================================  TEXTO  ======================================== */
@@ -592,7 +593,7 @@
      height: min-content;
      width: 100%;
      display: grid;
-     grid-template-rows: min-content auto min-content;
+     grid-template-rows: min-content min-content min-content;
  }
 
  .contentDisc {
@@ -806,7 +807,12 @@
      .picker__album {
          width: 100%;
      }
+
+     .secalbum1 {
+         margin-top: 500px;
+     }
  }
+
 
  /* ================================================================================================================= */
  /* ================================================  TOUR  ========================================================= */

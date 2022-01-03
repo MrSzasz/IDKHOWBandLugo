@@ -341,7 +341,7 @@
  /* ========================================  IMAGEN FINAL  ==================================== */
 
  .imgIndex5 {
-     background-image: url("https://i.imgur.com/Iiw4roH.png");
+     background-image: url("https://i.imgur.com/OXo4JzL.png");
  }
 
  /* ===========================================  TEXTO  ======================================== */
@@ -363,11 +363,11 @@
  @media only screen and (max-width: 600px) {
 
      .imgIndex1 {
-         background-image: url(../resources/index//responsive/history.png);
+         background-image: url("https://i.imgur.com/qsFD3tR.jpg");
      }
 
      .imgIndex2 {
-         background-image: url(../resources/index/responsive/genre.png);
+         background-image: url("https://i.imgur.com/S9NBccG.jpg");
      }
 
  }
@@ -391,7 +391,7 @@
  }
 
  .bamdHeader {
-     background-image: url(../resources/bamd/header.jpg);
+     background-image: url("https://i.imgur.com/4algIVO.jpg");
      background-position: top;
      background-attachment: fixed;
      background-size: cover;
@@ -459,7 +459,7 @@
      height: 100%;
      border-radius: 20px;
      backface-visibility: hidden;
-     background-image: url(../resources/bamd/frontCard.jpg);
+     background-image: url("https://i.imgur.com/Z2BfqcR.jpg");
      background-position: center;
      background-size: cover;
      background-repeat: no-repeat;
@@ -488,7 +488,7 @@
  /* =============================================  DALLON  ===================================== */
 
  #cardDallon .bodyBack {
-     background-image: url(../resources/bamd/dallon.jpg);
+     background-image: url("https://i.imgur.com/viKEJX8.jpg");
  }
 
  /* ==============================================  RYAN  ====================================== */
@@ -498,7 +498,7 @@
  }
 
  #cardRyan .bodyBack {
-     background-image: url(../resources/bamd/ryan.jpg);
+     background-image: url("https://i.imgur.com/Xjqofzs.jpg");
  }
 
  #cardRyan,
@@ -509,7 +509,7 @@
  /* =============================================  UNKNOWN  ==================================== */
 
  #cardUnknown {
-     background-image: url(../resources/bamd/noise.jpg);
+     background-image: url("https://i.imgur.com/H9NtneF.jpg");
  }
 
  #cardUnknown .bodyFront {
@@ -584,7 +584,7 @@
 
  @media only screen and (max-width: 400px) {
      .bamdHeader {
-         background-image: url(../resources/bamd/responsive/header.png);
+         background-image: url("https://i.imgur.com/8kIhwAT.png");
      }
 
      .containerBamd {
@@ -652,25 +652,25 @@
  /* =====================================  RAZZMATAZZ  ========================================= */
 
  .coverAlbum1 {
-     background-image: url(../resources/discografia/razzmatazz.jpg);
+     background-image: url("https://i.imgur.com/94aBx4O.jpg");
  }
 
  /* =======================================  1981 EP  ========================================== */
 
  .coverAlbum2 {
-     background-image: url(../resources/discografia/1981.jpg)
+     background-image: url("https://i.imgur.com/NoZuSBZ.jpg")
  }
 
  /* ====================================  CHRISTMAS DRAG  ====================================== */
 
  .coverAlbum3 {
-     background-image: url(../resources/discografia/christmasDrag.jpg)
+     background-image: url("https://i.imgur.com/BJSYELE.jpg")
  }
 
  /* =======================================  SINGLES  ========================================== */
 
  .coverAlbum4 {
-     background-image: url(../resources/discografia/singles.jpg);
+     background-image: url("https://i.imgur.com/no5te63.jpg");
  }
 
  /* ======================================  CONTENIDO  ========================================= */
@@ -700,7 +700,7 @@
  /* ======================================  RAZZMATAZZ  ======================================== */
 
  .containerMult__cover--album1 {
-     background-image: url(../resources/discografia/covers/razz.jpg);
+     background-image: url("https://i.imgur.com/FAeXUND.jpg");
  }
 
  .secalbum1 {
@@ -710,7 +710,7 @@
  /* ========================================  1981 EP  ========================================= */
 
  .containerMult__cover--album2 {
-     background-image: url(../resources/discografia/covers/1981ep.jpg);
+     background-image: url("https://i.imgur.com/twh61Nh.jpg");
  }
 
  .secalbum2 {
@@ -721,7 +721,7 @@
 
 
  .containerMult__cover--album3 {
-     background-image: url(../resources/discografia/covers/christmasdrag.jpg);
+     background-image: url("https://i.imgur.com/Rc7X0Em.jpg");
  }
 
  .secalbum3 {
@@ -731,7 +731,7 @@
  /* =====================================  MX. SINISTER  ======================================= */
 
  .containerMult__cover--album4 {
-     background-image: url(../resources/discografia/covers/mxsinister.jpg);
+     background-image: url("https://i.imgur.com/13KDCqU.jpg");
  }
 
  .secalbum4 {
@@ -741,7 +741,7 @@
  /* =========================================  DEBRA  ========================================== */
 
  .containerMult__cover--album5 {
-     background-image: url(../resources/discografia/covers/debra.jpg);
+     background-image: url("https://i.imgur.com/a2nxctY.jpg");
  }
 
  .secalbum5 {
@@ -751,7 +751,7 @@
  /* ====================================  MODERN DAY CAIN  ===================================== */
 
  .containerMult__cover--album6 {
-     background-image: url(../resources/discografia/covers/moderndaycain.jpg);
+     background-image: url("https://i.imgur.com/0U2zHG3.jpg");
  }
 
  .secalbum6 {
@@ -828,7 +828,7 @@
 
  .tourHeaderBs {
      height: 500px;
-     background-image: url(../resources/tour/tourheader.jpg);
+     background-image: url("https://i.imgur.com/IOLgYTe.jpg");
      background-size: cover;
      background-repeat: no-repeat;
      background-position: top;
@@ -958,7 +958,7 @@
  /* ================================================================================================================= */
 
  .formB {
-     background-image: url(../resources/contact/background.png);
+     background-image: url("https://i.imgur.com/ueJkCrT.png");
      background-position: center;
      background-size: cover;
      background-repeat: no-repeat;

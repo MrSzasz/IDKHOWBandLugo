@@ -1,4 +1,7 @@
  /*  */
+
+ :root {}
+
  @import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
 
  @font-face {
@@ -320,6 +323,12 @@
      background-image: url("https://i.imgur.com/Bb3tWiH.jpg");
  }
 
+ .textIndexBst span {
+     font-style: italic;
+     font-weight: bold;
+     text-transform: uppercase;
+ }
+
  /* ==========================================  GENERO  ======================================== */
 
  .imgIndex2 {
@@ -376,7 +385,11 @@
  /* ==================================================  BAMD  ======================================================= */
  /* ================================================================================================================= */
 
-
+ .contentBamd__info span {
+     font-style: italic;
+     font-weight: bold;
+     text-transform: uppercase;
+ }
 
  .bamdbody .navbar {
      width: 100vw;

@@ -666,8 +666,8 @@
 
  .coverAlbum1 {
      background-image: url("https://i.imgur.com/94aBx4O.jpg");
+     color: var(--rojo);
  }
-
  /* =======================================  1981 EP  ========================================== */
 
  .coverAlbum2 {

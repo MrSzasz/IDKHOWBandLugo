@@ -1,0 +1,1074 @@
+ /*  */
+
+ :root {}
+
+ @import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
+
+ @font-face {
+     font-family: logoFont;
+     src: url(../resources/fonts/helveticaBlack.otf);
+ }
+
+ @font-face {
+     font-family: VHSTitles;
+     src: url(../resources/fonts/VCR_OSD_MONO_1.001.ttf);
+ }
+
+ @font-face {
+     font-family: LightsGoDown;
+     src: url(../resources/fonts/bookmaniaBlack.ttf);
+ }
+
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+ ::selection {
+     background-color: #EE2E2B;
+     color: #E8E7D5;
+ }
+
+
+ /* ================================================================================================================= */
+ /* ==========================================  PROPIEDADES GENERALES  ============================================== */
+ /* ================================================================================================================= */
+
+ html {
+     scroll-behavior: smooth;
+ }
+
+ body {
+     background-color: #E8E7D5;
+     font-family: "courier-std", monospace;
+     color: #312F32;
+     font-size: 18px;
+ }
+
+ h1,
+ h2,
+ h3 {
+     font-family: VHSTitles;
+     font-size: 30px;
+     font-weight: 100;
+     letter-spacing: 5px;
+ }
+
+ h2 {
+     border-top: 1.7px solid #231F20;
+ }
+
+ p {
+     line-height: 45px;
+     text-align: justify;
+     overflow-y: auto;
+ }
+
+ a {
+     color: #312F32;
+     text-decoration: none;
+ }
+
+ /* =====================================  ROTATING LOGO  ====================================== */
+
+ .idkhow img {
+     height: 50px;
+     width: auto;
+     position: fixed;
+     z-index: 10;
+     bottom: 1px;
+     right: 14px;
+     animation-name: spin;
+     animation-duration: 6s;
+     animation-timing-function: linear;
+ }
+
+ @keyframes spin {
+     0% {
+         bottom: 1px;
+         right: -120px;
+     }
+
+     89.9% {
+         bottom: 1px;
+         right: 14px;
+     }
+
+     90% {
+         transform: scale(1);
+     }
+
+     95% {
+         transform: scale(2);
+     }
+
+     100% {
+         bottom: 1px;
+         right: 14px;
+     }
+ }
+
+ /* ======================================  GENERAL LOADING  =================================== */
+
+ .VHSPlay {
+     background-position: top;
+     background-size: cover;
+     background-repeat: no-repeat;
+     animation-name: playAnim;
+     animation-duration: 0.2s;
+ }
+
+ @keyframes playAnim {
+     0% {
+         background-image: url(../resources/anim/playbkg.gif);
+         z-index: 1000000000;
+         width: 100%;
+         height: 100%;
+         position: fixed;
+         left: 0;
+         top: 0;
+     }
+
+     99.9% {
+         width: 100%;
+         height: 100%;
+         z-index: 1000000000;
+         position: fixed;
+         background-image: url(../resources/anim/playbkg.gif);
+     }
+
+     100% {
+         width: 0px;
+         height: 0px;
+         z-index: 1;
+     }
+ }
+
+ /* =====================================  LIGHTS GO DOWN  ===================================== */
+
+ .LGD {
+     top: -100vh;
+     display: flex;
+     position: fixed;
+     z-index: 10000;
+     color: #FFD630;
+     width: 100%;
+     height: 100vh;
+     background-image: url(../resources/anim/LGD.gif);
+     align-items: center;
+     justify-content: center;
+     transition: all linear 5s;
+ }
+
+ .LGD h3 {
+     color: #fff;
+     text-shadow:
+         0 0 7px #fff,
+         0 0 10px #fff,
+         0 0 21px #fff,
+         0 0 42px #fffb00,
+         0 0 82px #fffb00,
+         0 0 92px #fffb00,
+         0 0 102px #fffb00,
+         0 0 151px #fffb00;
+     animation-name: pulse;
+     animation-duration: 1.5s;
+     animation-iteration-count: infinite;
+     animation-direction: alternate;
+ }
+
+ @keyframes pulse {
+     100% {
+         text-shadow:
+             0 0 4px #fff,
+             0 0 11px #fff,
+             0 0 19px #fff,
+             0 0 40px #fffb00,
+             0 0 80px #fffb00,
+             0 0 90px #fffb00,
+             0 0 100px #fffb00,
+             0 0 150px #fffb00;
+     }
+
+     0% {
+         text-shadow:
+             0 0 2px #fff,
+             0 0 4px #fff,
+             0 0 6px #fff,
+             0 0 10px #fffb00,
+             0 0 45px #fffb00,
+             0 0 55px #fffb00,
+             0 0 70px #fffb00,
+             0 0 80px #fffb00;
+     }
+ }
+
+ .LGD__hang {
+     top: 0;
+     height: 150px;
+     width: 100%;
+     background-image: url(../resources/anim/hang.png);
+     background-size: contain;
+     position: absolute;
+ }
+
+ .lightbulb {
+     top: 24px;
+     position: absolute;
+     height: 25px;
+     width: 25px;
+     background-image: url(../resources/anim/lightbult.svg);
+     background-repeat: no-repeat;
+     background-position: center;
+     background-size: contain;
+     cursor: pointer;
+     z-index: 100000;
+     transition: ease all 0.3s;
+ }
+
+ .lightbulb:active {
+     background-image: url(../resources/anim/lightbultOn.svg);
+ }
+
+ .lightbulb:active~.LGD {
+     top: 0vh;
+ }
+
+
+ /* ================================================================================================================= */
+ /* ===========================================  PROPIEDADES DEL HEADER  ============================================ */
+ /* ================================================================================================================= */
+
+ .navbar-brand img {
+     height: auto;
+     width: 170px;
+ }
+
+ .navbar-light .navbar-nav .nav-link {
+     color: #231F20;
+     font-family: logoFont;
+     font-size: 17px;
+ }
+
+ .navbar-light .navbar-nav .nav-link i {
+     font-size: 14px;
+ }
+
+ .navbar-light .navbar-toggler .navbar-toggler-icon {
+     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2835, 31, 31, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+ }
+
+ /* =========================================  BOTON  ========================================== */
+
+ .navbar-toggler {
+     border: none;
+ }
+
+ /* ================================================================================================================= */
+ /* ===================================================  INDEX  ===================================================== */
+ /* ================================================================================================================= */
+
+ .VHSLoading {
+     background-position: top;
+     background-size: cover;
+     background-repeat: no-repeat;
+     animation-name: loadAnim;
+     animation-duration: 1.76s;
+ }
+
+ @keyframes loadAnim {
+     0% {
+         background-image: url(../resources/anim/loading.gif);
+         z-index: 1000000000;
+         width: 100%;
+         height: 100%;
+         position: fixed;
+         left: 0;
+         top: 0;
+     }
+
+     99.9% {
+         width: 100%;
+         height: 100%;
+         z-index: 1000000000;
+         position: fixed;
+         background-image: url(../resources/anim/loading.gif);
+     }
+
+     100% {
+         width: 0px;
+         height: 0px;
+         z-index: 1;
+     }
+ }
+
+ /* ========================================  GENERALES  ======================================= */
+
+
+ .container-fluid {
+     height: 500px;
+ }
+
+ .imgParallaxBst {
+     background-position: center;
+     background-size: cover;
+     background-attachment: fixed;
+     background-repeat: no-repeat;
+ }
+
+ /* =========================================  HISTORIA  ======================================= */
+
+ .imgIndex1 {
+     background-image: url("https://i.imgur.com/Bb3tWiH.jpg");
+ }
+
+ .textIndexBst span {
+     font-style: italic;
+     font-weight: bold;
+     text-transform: uppercase;
+ }
+
+ /* ==========================================  GENERO  ======================================== */
+
+ .imgIndex2 {
+     background-image: url("https://i.imgur.com/OYppIar.jpg");
+ }
+
+ /* ========================================  INFLUENCIAS  ===================================== */
+
+ .imgIndex3 {
+     background-image: url("https://i.imgur.com/sIFwDC5.png");
+ }
+
+ /* =========================================  NOTICIAS  ======================================= */
+
+ .imgIndex4 {
+     background-image: url("https://i.imgur.com/WGd6eBW.png");
+ }
+
+ /* ========================================  IMAGEN FINAL  ==================================== */
+
+ .imgIndex5 {
+     background-image: url("https://i.imgur.com/OXo4JzL.png");
+ }
+
+ /* ===========================================  TEXTO  ======================================== */
+
+ .textIndexBst {
+     height: min-content;
+ }
+
+ /* ===================================  PROPIEDADES DE TWITTER  =============================== */
+
+ .twitter-timeline {
+     box-shadow: 5px 5px 5px #231F20;
+     border-radius: 20px;
+ }
+
+ /* ================================================  MEDIA QUERIES  =============================================== */
+
+
+ @media only screen and (max-width: 600px) {
+
+     .imgIndex1 {
+         background-image: url("https://i.imgur.com/qsFD3tR.jpg");
+     }
+
+     .imgIndex2 {
+         background-image: url("https://i.imgur.com/S9NBccG.jpg");
+     }
+
+ }
+
+ /* ================================================================================================================= */
+ /* ==================================================  BAMD  ======================================================= */
+ /* ================================================================================================================= */
+
+ .contentBamd__info span {
+     font-style: italic;
+     font-weight: bold;
+     text-transform: uppercase;
+ }
+
+ .bamdbody .navbar {
+     width: 100vw;
+      !important
+ }
+
+ .containerBamd {
+     height: min-content;
+     width: 100%;
+     display: grid;
+     grid-template-rows: 500px min-content;
+ }
+
+ .bamdHeader {
+     background-image: url("https://i.imgur.com/4algIVO.jpg");
+     background-position: top;
+     background-attachment: fixed;
+     background-size: cover;
+     height: 500px;
+     grid-column: 1/2;
+ }
+
+ .contentBamd {
+     width: 100%;
+     display: grid;
+     grid-template-rows: repeat(3, auto);
+     grid-template-columns: 10% 80% 10%;
+     padding-bottom: 10px;
+     gap: 20px;
+     grid-column: 1/2;
+     justify-content: center;
+ }
+
+ .contentBamd span {
+     font-family: VHSTitles;
+ }
+
+ .contentBamd__sec {
+     grid-column: 2/3;
+     display: flex;
+     padding: 10px 10px 25px 10px;
+     gap: 10px;
+ }
+
+ .contentBamd__info {
+     width: 80%;
+ }
+
+ /* ===================================  CONTENEDOR DE LA CARTA  =============================== */
+
+ .contentBamd__cardContainer {
+     width: 250px;
+     height: 320px;
+ }
+
+ /* =====================================  CUERPO DE LA CARTA  ================================= */
+
+ .cardContainer__body {
+     position: relative;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     border-radius: 10px;
+     transform-style: preserve-3d;
+     transition: all 0.9s ease;
+ }
+
+ .cardContainer__body:hover {
+     transform: rotateY(180deg);
+ }
+
+ /* ===========================================  FRENTE  ======================================= */
+
+ .bodyFront {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     border-radius: 20px;
+     backface-visibility: hidden;
+     background-image: url("https://i.imgur.com/Z2BfqcR.jpg");
+     background-position: center;
+     background-size: cover;
+     background-repeat: no-repeat;
+     box-shadow: 5px 5px 5px #231F20;
+
+ }
+
+ /* ============================================  ATRAS  ======================================= */
+
+ .bodyBack {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     border: #231F20 2px solid;
+     border-radius: 20px;
+     backface-visibility: hidden;
+     transform: rotateY(180deg);
+     background-position: center;
+     background-size: cover;
+     background-repeat: no-repeat;
+     box-shadow: 5px 5px 5px #231F20;
+ }
+
+ /* =============================================  DALLON  ===================================== */
+
+ #cardDallon .bodyBack {
+     background-image: url("https://i.imgur.com/viKEJX8.jpg");
+ }
+
+ /* ==============================================  RYAN  ====================================== */
+
+ #cardRyan {
+     flex-direction: row-reverse;
+ }
+
+ #cardRyan .bodyBack {
+     background-image: url("https://i.imgur.com/Xjqofzs.jpg");
+ }
+
+ #cardRyan,
+ #cardRyan p {
+     text-align: end;
+ }
+
+ /* =============================================  UNKNOWN  ==================================== */
+
+ #cardUnknown {
+     background-image: url("https://i.imgur.com/H9NtneF.jpg");
+ }
+
+ #cardUnknown .bodyFront {
+     background-image: url(../resources/bamd/unknownFront.gif);
+ }
+
+ #cardUnknown .bodyBack {
+     background-image: url(../resources/bamd/unknown.gif);
+ }
+
+ #cardUnknown .contentBamd__info {
+     color: #E8E7D5;
+     background-color: #312F32;
+     padding: 10px;
+ }
+
+ .whiteShadow {
+     background-position: top;
+     background-size: cover;
+     background-repeat: no-repeat;
+     animation-name: animWS;
+     animation-duration: 4s;
+ }
+
+ @keyframes animWS {
+     0% {
+         background-image: url(../resources/anim/init.gif);
+         z-index: 1000000000;
+         width: 100%;
+         height: 100%;
+         position: fixed;
+         left: 0;
+         top: 0;
+     }
+
+     99.9% {
+         width: 100%;
+         height: 100%;
+         z-index: 1000000000;
+         position: fixed;
+         background-image: url(../resources/anim/init.gif);
+     }
+
+     100% {
+         width: 0px;
+         height: 0px;
+         z-index: 1;
+     }
+ }
+
+ /* ================================================  MEDIA QUERIES  =============================================== */
+
+ @media only screen and (max-width: 700px) {
+     .contentBamd__sec {
+         flex-direction: column;
+         align-items: center;
+     }
+
+     #cardRyan {
+         flex-direction: row;
+         flex-wrap: wrap;
+         justify-content: center;
+     }
+
+
+     #cardRyan,
+     #cardRyan p {
+         text-align: start;
+     }
+
+ }
+
+ @media only screen and (max-width: 400px) {
+     .bamdHeader {
+         background-image: url("https://i.imgur.com/8kIhwAT.png");
+     }
+
+     .containerBamd {
+         width: 400px;
+     }
+ }
+
+
+ /* ================================================================================================================= */
+ /* ==============================================  DISCOGRAFIA  ==================================================== */
+ /* ================================================================================================================= */
+
+ .containerDisc {
+     height: min-content;
+     width: 100%;
+     display: grid;
+     grid-template-rows: min-content min-content min-content;
+ }
+
+ .contentDisc {
+     display: grid;
+     grid-template-rows: 500px repeat(6, min-content);
+     grid-template-columns: 10% 80% 10%;
+     gap: 40px;
+     grid-column: 1/2;
+     justify-content: center;
+ }
+
+ /* =========================================  SELECTOR  ======================================= */
+
+ .contentDisc__picker {
+     grid-column: 2/3;
+     display: flex;
+     gap: 6px;
+ }
+
+ .picker__album {
+     height: 100%;
+     width: 25%;
+     border: #231F20 2px solid;
+     border-radius: 20px;
+     background-position: center;
+     background-size: cover;
+     background-repeat: no-repeat;
+     box-shadow: 5px 5px 5px #231F20;
+     position: relative;
+     overflow: hidden;
+ }
+
+ .overlayAlbum {
+     position: absolute;
+     top: 0%;
+     left: 0%;
+     height: 100%;
+     width: 100%;
+     opacity: 0.8;
+     transition: 0.3s ease;
+     background-color: #000;
+ }
+
+ .overlayAlbum:hover {
+     opacity: 0;
+ }
+
+ /* =====================================  RAZZMATAZZ  ========================================= */
+
+ .coverAlbum1 {
+     background-image: url("https://i.imgur.com/94aBx4O.jpg");
+     color: var(--rojo);
+ }
+ /* =======================================  1981 EP  ========================================== */
+
+ .coverAlbum2 {
+     background-image: url("https://i.imgur.com/NoZuSBZ.jpg")
+ }
+
+ /* ====================================  CHRISTMAS DRAG  ====================================== */
+
+ .coverAlbum3 {
+     background-image: url("https://i.imgur.com/BJSYELE.jpg")
+ }
+
+ /* =======================================  SINGLES  ========================================== */
+
+ .coverAlbum4 {
+     background-image: url("https://i.imgur.com/no5te63.jpg");
+ }
+
+ /* ======================================  CONTENIDO  ========================================= */
+
+ .contentDisc section {
+     height: min-content;
+     grid-column: 2/3;
+ }
+
+ .containerMult {
+     display: flex;
+     gap: 6px;
+ }
+
+ .containerMult__cover {
+     flex-basis: 450px;
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+     box-shadow: 3px 3px 5px #231F20;
+ }
+
+ .containerMult__text {
+     width: 50%;
+ }
+
+ /* ======================================  RAZZMATAZZ  ======================================== */
+
+ .containerMult__cover--album1 {
+     background-image: url("https://i.imgur.com/FAeXUND.jpg");
+ }
+
+ .secalbum1 {
+     grid-row: 2/3;
+ }
+
+ /* ========================================  1981 EP  ========================================= */
+
+ .containerMult__cover--album2 {
+     background-image: url("https://i.imgur.com/twh61Nh.jpg");
+ }
+
+ .secalbum2 {
+     grid-row: 3/4;
+ }
+
+ /* ====================================  CHRISTMAS DRAG  ====================================== */
+
+
+ .containerMult__cover--album3 {
+     background-image: url("https://i.imgur.com/Rc7X0Em.jpg");
+ }
+
+ .secalbum3 {
+     grid-row: 4/5;
+ }
+
+ /* =====================================  MX. SINISTER  ======================================= */
+
+ .containerMult__cover--album4 {
+     background-image: url("https://i.imgur.com/13KDCqU.jpg");
+ }
+
+ .secalbum4 {
+     grid-row: 5/6;
+ }
+
+ /* =========================================  DEBRA  ========================================== */
+
+ .containerMult__cover--album5 {
+     background-image: url("https://i.imgur.com/a2nxctY.jpg");
+ }
+
+ .secalbum5 {
+     grid-row: 6/7;
+ }
+
+ /* ====================================  MODERN DAY CAIN  ===================================== */
+
+ .containerMult__cover--album6 {
+     background-image: url("https://i.imgur.com/0U2zHG3.jpg");
+ }
+
+ .secalbum6 {
+     grid-row: 7/8;
+ }
+
+ /* ========================================  SPOTIFY  ========================================= */
+
+ .contentDisc .containerMult__spotify {
+     width: 50%;
+     border-radius: 20px;
+ }
+
+ .contentDisc .containerMult__spotify iframe {
+     box-shadow: 5px 5px 5px #231F20;
+     border-radius: 20px;
+ }
+
+ /* ================================================  MEDIA QUERIES  =============================================== */
+
+ @media only screen and (max-width: 1150px) {
+     .contentDisc__picker {
+         flex-wrap: wrap;
+     }
+
+     .picker__album {
+         height: 50%;
+         width: 49%;
+     }
+
+ }
+
+ @media only screen and (max-width: 1020px) {
+     .containerMult {
+         flex-wrap: wrap;
+     }
+
+     .containerMult__cover {
+         flex-basis: 348px;
+         height: 348px;
+     }
+
+     .contentDisc .containerMult__spotify {
+         width: 100%;
+     }
+
+ }
+
+ @media only screen and (max-width: 890px) {
+     .containerMult {
+         justify-content: center;
+     }
+
+     .containerMult__text {
+         width: 100%;
+     }
+ }
+
+ @media only screen and (max-width: 380px) {
+
+     .picker__album {
+         width: 100%;
+     }
+
+     .secalbum1 {
+         margin-top: 500px;
+     }
+ }
+
+
+ /* ================================================================================================================= */
+ /* ================================================  TOUR  ========================================================= */
+ /* ================================================================================================================= */
+
+ .tourHeaderBs {
+     height: 500px;
+     background-image: url("https://i.imgur.com/IOLgYTe.jpg");
+     background-size: cover;
+     background-repeat: no-repeat;
+     background-position: top;
+ }
+
+ /* =========================================  LISTA  ========================================== */
+
+ .align-items-center .card {
+     background-color: #E8E7D5;
+     border: none;
+ }
+
+ .align-items-center .card .card-header {
+     background-color: #E8E7D5;
+ }
+
+ .tourInfo {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     height: min-content;
+     transition: ease .20s all;
+     border-bottom: 2px solid #eeede8;
+ }
+
+ .tourInfo:hover {
+     border-left: 14px solid #EE2E2B;
+     background-color: rgba(35, 31, 32, 0.04);
+ }
+
+ .tourInfo__links {
+     height: 100%;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     width: 100%;
+ }
+
+ .tourInfo__links__text h3 {
+     font-size: 43px;
+     line-height: 30px;
+     letter-spacing: 4px;
+     padding-top: 10px;
+ }
+
+ .tourInfo__links__text {
+     font-size: 20px;
+     letter-spacing: 12px;
+ }
+
+ /* =========================================  TEXTO  ========================================== */
+
+ .btn-link h3 {
+     color: #312F32;
+     letter-spacing: 10px;
+ }
+
+ .btn-link {
+     color: #312F32;
+ }
+
+ .btn-link:hover {
+     text-decoration: none;
+ }
+
+ .list-group-item-action {
+     color: #312F32;
+ }
+
+ /* =========================================  BOTON  ========================================== */
+
+ .tourInfo__links__btn button {
+     height: 60px;
+     width: 180px;
+     font-size: 25px;
+     color: #231F20;
+     border: 2px solid #231F20;
+     box-shadow: 5px 5px 5px #231F20;
+     cursor: pointer;
+     transition: ease .20s all;
+     background-color: transparent;
+     font-family: VHSTitles;
+ }
+
+ .tourInfo__links__btn button:hover {
+     font-size: 26px;
+     background-color: #231F20;
+     color: #E8E7D5;
+ }
+
+ /* ================================================  MEDIA QUERIES  =============================================== */
+
+ @media only screen and (max-width: 800px) {
+
+     .tourInfo {
+         border: transparent;
+     }
+
+     .tourInfo__links {
+         flex-direction: column;
+         gap: 20px;
+     }
+
+     .tourInfo__links__text {
+         text-align: center;
+     }
+
+     .tourInfo__links__btn button {
+         width: 250px;
+     }
+ }
+
+ @media only screen and (max-width: 382px) {
+     .tourInfo__links__text h3 {
+         font-size: 33px;
+     }
+ }
+
+ a:hover {
+     color: #231F20;
+     text-decoration: none
+ }
+
+
+ /* ================================================================================================================= */
+ /* =================================================  CONTACTO  ==================================================== */
+ /* ================================================================================================================= */
+
+ .formB {
+     background-image: url("https://i.imgur.com/ueJkCrT.png");
+     background-position: center;
+     background-size: cover;
+     background-repeat: no-repeat;
+     height: min-content;
+ }
+
+ .formB .container {
+     background-color: #E8E7D5;
+     height: min-content;
+ }
+
+ .formB .container label {
+     background-color: #E8E7D5;
+     width: 100%;
+ }
+
+ .formB .container h2 {
+     font-size: 23px;
+ }
+
+ .form-control {
+     width: 100%;
+     height: 40px;
+     font-size: 18px;
+     background-color: transparent;
+     border: none;
+     border-bottom: 2px solid #eeede8;
+     font-family: "courier-std", monospace;
+     text-align: justify;
+     letter-spacing: 3px;
+ }
+
+ /* ====================================  AUTOCOMPLETAR  ======================================= */
+
+ input:-webkit-autofill,
+ input:-webkit-autofill:hover,
+ input:-webkit-autofill:focus,
+ textarea:-webkit-autofill,
+ textarea:-webkit-autofill:hover,
+ textarea:-webkit-autofill:focus,
+ select:-webkit-autofill,
+ select:-webkit-autofill:hover,
+ select:-webkit-autofill:focus {
+     border: transparent;
+     -webkit-text-fill-color: #312F32;
+     -webkit-box-shadow: 0 0 0px 1000px #E8E7D5 inset;
+     transition: background-color 5000s ease-in-out 0s;
+ }
+
+ /* ====================================  BOTON ENVIAR  ======================================== */
+
+ .btnB {
+     width: 100%;
+     height: 40px;
+     font-size: 20px;
+     border: 2px solid #231F20;
+     box-shadow: 5px 5px 5px #231F20;
+     cursor: pointer;
+     transition: ease .20s all;
+     background-color: transparent;
+     border-radius: 10px;
+     font-family: VHSTitles;
+     line-height: 0;
+ }
+
+ .btnB:hover {
+     font-size: 21px;
+     background-color: #231F20;
+     color: #E8E7D5;
+ }
+
+ /* ========================================  REDES  =========================================== */
+
+ .redesB img {
+     height: 35px;
+     width: 35px;
+     cursor: pointer;
+ }
+
+ .redesB {
+     height: min-content;
+ }
+
+
+ /* ================================================================================================================= */
+ /* ===============================================  FOOTER  ======================================================== */
+ /* ================================================================================================================= */
+
+ footer h3 {
+     font-size: 14px;
+ }
+
+ footer img {
+     height: 45px;
+     width: auto;
+ }
+
+ .page-footer .d-flex a:hover {
+     color: #EE2E2B;
+ }

@@ -9,6 +9,20 @@
  $bottom-border: #eeede8;
 
  /* ================================================================================================================= */
+ /* ==================================================  MIXIN  ====================================================== */
+ /* ================================================================================================================= */
+
+ @mixin mixbackground($urlfondo, $bgposition:center, $bgsize:cover) {
+     background: {
+         image: $urlfondo;
+         size: $bgsize;
+         repeat: no-repeat;
+         position: $bgposition;
+     }
+ }
+
+
+ /* ================================================================================================================= */
  /* =================================================  FUENTES  ===================================================== */
  /* ================================================================================================================= */
 
@@ -95,9 +109,12 @@
          z-index: 10;
          bottom: 1px;
          right: 14px;
-         animation-name: spin;
-         animation-duration: 6s;
-         animation-timing-function: linear;
+
+         animation {
+             name: spin;
+             duration: 6s;
+             timing-function: linear;
+         }
      }
  }
 
@@ -129,16 +146,14 @@
  /* ======================================  GENERAL LOADING  =================================== */
 
  .VHSPlay {
-     background: {
-         position: top;
-         size: cover;
-         repeat: no-repeat;
+     @include mixbackground(none, top);
+
+     animation: {
+         name: playAnim;
+         duration: 0.2s;
      }
 
      ;
-     animation-name: playAnim;
-     animation-duration: 0.2s;
-
  }
 
  @keyframes playAnim {
@@ -188,15 +203,7 @@
      position: absolute;
      height: 25px;
      width: 25px;
-     background-image: url(../resources/anim/lightbult.svg);
-
-     background: {
-         repeat: no-repeat;
-         position: center;
-         size: contain;
-     }
-
-     ;
+     @include mixbackground(url(../resources/anim/lightbult.svg), center, contain);
      cursor: pointer;
      z-index: 100000;
      transition: ease all 0.3s;
@@ -231,10 +238,15 @@
              0 0 92px #fffb00,
              0 0 102px #fffb00,
              0 0 151px #fffb00;
-         animation-name: pulse;
-         animation-duration: 1.5s;
-         animation-iteration-count: infinite;
-         animation-direction: alternate;
+
+         animation: {
+             name: pulse;
+             duration: 1.5s;
+             iteration-count: infinite;
+             direction: alternate;
+         }
+
+         ;
      }
  }
 
@@ -287,21 +299,55 @@
          }
      }
 
-     .navbar-nav {
-         .nav-link {
-             color: $black;
+     .navbar-collapse {
+         .navbar-nav {
+             display: flex;
+             align-items: center;
 
-             font: {
-                 family: logoFont;
-                 size: 17px;
+             .nav-item {
+                 .nav-link {
+                     color: $black;
+
+                     font: {
+                         family: logoFont;
+                         size: 17px;
+                     }
+
+                     ;
+
+                     i {
+                         font-size: 14px;
+                     }
+                 }
              }
 
-             ;
-
-             i {
-                 font-size: 14px;
-             }
          }
+     }
+
+ }
+
+ /* ================================================  MEDIA QUERIES  =============================================== */
+
+
+ @media only screen and (min-width: 993px) {
+     .navbar-collapse {
+         display: flex;
+         justify-content: flex-end;
+     }
+ }
+
+ @media only screen and (max-width: 992px) {
+     .nav-link {
+         letter-spacing: 8px;
+
+         &::after {
+             content: '==';
+         }
+
+         &::before {
+             content: '==';
+         }
+
      }
  }
 
@@ -311,16 +357,14 @@
  /* ================================================================================================================= */
 
  .VHSLoading {
-     background: {
-         position: top;
-         size: cover;
-         repeat: no-repeat;
+     @include mixbackground(none, top);
+
+     animation: {
+         name: loadAnim;
+         duration: 1.76s;
      }
 
      ;
-
-     animation-name: loadAnim;
-     animation-duration: 1.76s;
  }
 
  @keyframes loadAnim {
@@ -354,16 +398,8 @@
  .containerIndex {
      .imgParallaxBst {
          height: 500px;
-
-         background: {
-             position: center;
-             size: cover;
-             attachment: fixed;
-             repeat: no-repeat;
-             image: url("https://i.imgur.com/Bb3tWiH.jpg");
-         }
-
-         ;
+         @include mixbackground(url("https://i.imgur.com/Bb3tWiH.jpg"));
+         background-attachment: fixed;
      }
 
      /* =========================================  HISTORIA  ======================================= */
@@ -437,15 +473,15 @@
  /* ================================================================================================================= */
 
  .whiteShadow {
-     background: {
-         position: top;
-         size: cover;
-         repeat: no-repeat;
+     width: 100%;
+     @include mixbackground(none, top);
+
+     animation: {
+         name: animWS;
+         duration: 4s;
      }
 
      ;
-     animation-name: animWS;
-     animation-duration: 4s;
  }
 
  @keyframes animWS {
@@ -474,131 +510,121 @@
      }
  }
 
- .containerBamd {
-     .bamdHeader {
-         background: {
-             image: url("https://i.imgur.com/4algIVO.jpg");
-             position: top;
-             attachment: fixed;
-             size: cover;
-         }
-
-         ;
-         height: 500px;
-         grid-column: 1/2;
-     }
-
-     height: min-content;
+ .bamdBody {
      width: 100%;
-     display: grid;
-     grid-template-rows: 500px min-content;
 
-     .contentBamd {
+     .containerBamd {
          width: 100%;
-         display: grid;
-         grid-template-rows: repeat(3, auto);
-         grid-template-columns: 10% 80% 10%;
-         padding-bottom: 10px;
-         gap: 20px;
-         grid-column: 1/2;
-         justify-content: center;
 
-         span {
-             font-family: VHSTitles;
+         .bamdHeader {
+             height: min-content;
+             display: grid;
+             grid-template-rows: 500px min-content;
+             @include mixbackground(url("https://i.imgur.com/4algIVO.jpg"), top) background-attachment: fixed;
+             height: 500px;
+             grid-column: 1/2;
          }
 
-         .contentBamd__sec {
-             grid-column: 2/3;
-             display: flex;
-             padding: 10px 10px 25px 10px;
-             gap: 10px;
+         .contentBamd {
+             width: 100%;
+             display: grid;
+             grid-template-rows: repeat(3, auto);
+             grid-template-columns: 10% 80% 10%;
+             padding-bottom: 10px;
+             gap: 20px;
+             grid-column: 1/2;
+             justify-content: center;
 
-             .contentBamd__info {
-                 width: 80%;
-
-                 span {
-                     font: {
-                         style: italic;
-                         weight: bold;
-                     }
-
-                     text-transform: uppercase;
-                 }
+             span {
+                 font-family: VHSTitles;
              }
 
-             /* ===================================  CONTENEDOR DE LA CARTA  =============================== */
+             .contentBamd__sec {
+                 grid-column: 2/3;
+                 display: flex;
+                 padding: 10px 10px 25px 10px;
+                 gap: 10px;
 
-             .contentBamd__cardContainer {
-                 width: 250px;
-                 height: 320px;
+                 .contentBamd__info {
+                     width: 80%;
 
-                 /* =====================================  CUERPO DE LA CARTA  ================================= */
 
-                 .cardContainer__body {
-                     position: relative;
-                     top: 0;
-                     left: 0;
-                     width: 100%;
-                     height: 100%;
-                     border-radius: 10px;
-                     transform-style: preserve-3d;
-                     transition: all 0.9s ease;
 
-                     &:hover {
-                         transform: rotateY(180deg);
+                     p {
+                         text-align: justify;
+
+                         span {
+                             font: {
+                                 style: italic;
+                                 weight: bold;
+                             }
+
+                             text-transform: uppercase;
+                         }
                      }
 
-                     /* ===========================================  FRENTE  ======================================= */
 
-                     .bodyFront {
-                         position: absolute;
+                 }
+
+                 /* ===================================  CONTENEDOR DE LA CARTA  =============================== */
+
+                 .contentBamd__cardContainer {
+                     width: 250px;
+                     height: 320px;
+
+                     /* =====================================  CUERPO DE LA CARTA  ================================= */
+
+                     .cardContainer__body {
+                         position: relative;
                          top: 0;
                          left: 0;
                          width: 100%;
                          height: 100%;
-                         border-radius: 20px;
-                         backface-visibility: hidden;
+                         border-radius: 10px;
+                         transform-style: preserve-3d;
+                         transition: all 0.9s ease;
 
-                         background: {
-                             image: url("https://i.imgur.com/Z2BfqcR.jpg");
-                             position: center;
-                             size: cover;
-                             repeat: no-repeat;
+                         &:hover {
+                             transform: rotateY(180deg);
                          }
 
-                         ;
-                         box-shadow: 5px 5px 5px $black;
+                         /* ===========================================  FRENTE  ======================================= */
 
-                     }
+                         .bodyFront {
+                             position: absolute;
+                             top: 0;
+                             left: 0;
+                             width: 100%;
+                             height: 100%;
+                             border-radius: 20px;
+                             backface-visibility: hidden;
+                             @include mixbackground(url("https://i.imgur.com/Z2BfqcR.jpg"));
+                             box-shadow: 5px 5px 5px $black;
 
-                     /* ============================================  ATRAS  ======================================= */
-
-                     .bodyBack {
-                         position: absolute;
-                         top: 0;
-                         left: 0;
-                         width: 100%;
-                         height: 100%;
-                         border: $black 2px solid;
-                         border-radius: 20px;
-                         backface-visibility: hidden;
-                         transform: rotateY(180deg);
-
-                         background: {
-                             position: center;
-                             size: cover;
-                             repeat: no-repeat;
                          }
 
-                         ;
+                         /* ============================================  ATRAS  ======================================= */
 
-                         box-shadow: 5px 5px 5px $black;
+                         .bodyBack {
+                             position: absolute;
+                             top: 0;
+                             left: 0;
+                             width: 100%;
+                             height: 100%;
+                             border: $black 2px solid;
+                             border-radius: 20px;
+                             backface-visibility: hidden;
+                             transform: rotateY(180deg);
+                             @include mixbackground(none);
+                             box-shadow: 5px 5px 5px $black;
+                         }
                      }
                  }
              }
          }
      }
  }
+
 
  /* =============================================  DALLON  ===================================== */
 
@@ -620,7 +646,6 @@
 
      p {
          text-align: end;
-
      }
  }
 
@@ -663,7 +688,7 @@
          text-align: start;
 
          p {
-             text-align: start;
+             text-align: justify;
          }
      }
  }
@@ -703,15 +728,7 @@
              width: 25%;
              border: $black 2px solid;
              border-radius: 20px;
-
-             background: {
-                 position: center;
-                 size: cover;
-                 repeat: no-repeat;
-             }
-
-             ;
-
+             @include mixbackground(none);
              box-shadow: 5px 5px 5px $black;
              position: relative;
              overflow: hidden;
@@ -767,14 +784,7 @@
 
          .containerMult__cover {
              flex-basis: 450px;
-
-             background: {
-                 position: center;
-                 repeat: no-repeat;
-                 size: cover;
-             }
-
-             ;
+             @include mixbackground(none);
              box-shadow: 3px 3px 5px $black;
          }
 
@@ -857,15 +867,18 @@
      grid-row: 7/8;
  }
 
+
  /* ================================================  MEDIA QUERIES  =============================================== */
 
  @media only screen and (max-width: 1150px) {
-     .contentDisc__picker {
-         flex-wrap: wrap;
+     .contentDisc {
+         .contentDisc__picker {
+             flex-wrap: wrap;
 
-         .picker__album {
-             height: 50%;
-             width: 49%;
+             .picker__album {
+                 height: 50%;
+                 width: 49%;
+             }
          }
      }
  }
@@ -888,23 +901,30 @@
  }
 
  @media only screen and (max-width: 890px) {
-     .containerMult {
-         justify-content: center;
+     .contentDisc {
+         .containerMult {
+             justify-content: center;
 
-         .containerMult__text {
-             width: 100%;
+             .containerMult__text {
+                 width: 100%;
+             }
          }
      }
  }
 
  @media only screen and (max-width: 380px) {
+     .contentDisc {
+         .contentDisc__picker {
+             flex-wrap: wrap;
 
-     .picker__album {
-         width: 100%;
-     }
+             .picker__album {
+                 width: 100%;
+             }
+         }
 
-     .secalbum1 {
-         margin-top: 500px;
+         .secalbum1 {
+             margin-top: 500px;
+         }
      }
  }
 
@@ -915,16 +935,7 @@
 
  .tourHeaderBs {
      height: 500px;
-
-     background: {
-         image: url("https://i.imgur.com/IOLgYTe.jpg");
-         size: cover;
-         repeat: no-repeat;
-         position: top;
-     }
-
-     ;
-
+     @include mixbackground(url("https://i.imgur.com/IOLgYTe.jpg"), top)
  }
 
  /* =========================================  LISTA  ========================================== */
@@ -986,7 +997,6 @@
 
                                  h3 {
                                      font-size: 43px;
-                                     line-height: 30px;
                                      letter-spacing: 4px;
                                      padding-top: 10px;
                                  }
@@ -1070,14 +1080,7 @@
 
 
  .formB {
-     background: {
-         image: url("https://i.imgur.com/ueJkCrT.png");
-         position: center;
-         size: cover;
-         repeat: no-repeat;
-     }
-
-     ;
+     @include mixbackground(url("https://i.imgur.com/ueJkCrT.png"));
      height: min-content;
 
      .col-lg-3 {
@@ -1190,5 +1193,16 @@
                  color: $red;
              }
          }
+     }
+
+     .site-map {
+         font-size: 14px;
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: space-between;
+         column-gap: 10px;
+         height: min-content;
+         width: 50%;
+         margin: auto;
      }
  }

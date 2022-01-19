@@ -835,11 +835,14 @@
      .containerBamd {
          width: 400px;
 
-
-     }
-
-     .contentBamd__info {
-         padding: 0;
+         .contentBamd {
+             #cardDallon, #cardRyan, #cardUnknown {
+                 .contentBamd__info {
+                     padding: 0%;
+                     width: 100%;
+                 }
+             }
+         }
      }
  }
 

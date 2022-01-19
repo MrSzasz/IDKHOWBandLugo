@@ -685,8 +685,7 @@
 
                  .contentBamd__info {
                      width: 80%;
-
-
+                     padding: 0 15px 0 15px;
 
                      p {
                          text-align: justify;
@@ -700,8 +699,6 @@
                              text-transform: uppercase;
                          }
                      }
-
-
                  }
 
                  /* ===================================  CONTENEDOR DE LA CARTA  =============================== */
@@ -709,6 +706,12 @@
                  .contentBamd__cardContainer {
                      width: 250px;
                      height: 320px;
+
+                     &:hover {
+                         .cardContainer__body {
+                             transform: rotateY(180deg);
+                         }
+                     }
 
                      /* =====================================  CUERPO DE LA CARTA  ================================= */
 
@@ -721,10 +724,6 @@
                          border-radius: 10px;
                          transform-style: preserve-3d;
                          transition: all 0.9s ease;
-
-                         &:hover {
-                             transform: rotateY(180deg);
-                         }
 
                          /* ===========================================  FRENTE  ======================================= */
 
@@ -835,6 +834,12 @@
 
      .containerBamd {
          width: 400px;
+
+
+     }
+
+     .contentBamd__info {
+         padding: 0;
      }
  }
 

@@ -445,7 +445,7 @@
                      transition: 250ms ease;
 
                      &:hover {
-                         color: red;
+                         color: map-get($colorPalette, redbase);
                      }
 
                      font: {
@@ -643,6 +643,7 @@
          name: animWS;
          duration: 4s;
      }
+
      ;
  }
 

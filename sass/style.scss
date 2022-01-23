@@ -29,9 +29,11 @@
      redbase: #EE2E2B,
  );
 
+
  /* ================================================================================================================= */
  /* ==================================================  MIXIN  ====================================================== */
  /* ================================================================================================================= */
+
 
  @mixin mixbackground($urlfondo, $bgposition:center, $bgsize:cover) {
      background: {
@@ -41,6 +43,7 @@
          position: $bgposition;
      }
  }
+
 
  /* ================================================================================================================= */
  /* =================================================  EXTEND  ====================================================== */
@@ -157,6 +160,7 @@
  /* =================================================  FUENTES  ===================================================== */
  /* ================================================================================================================= */
 
+
  @import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
 
  @font-face {
@@ -178,6 +182,7 @@
  /* ================================================================================================================= */
  /* ==========================================  PROPIEDADES GENERALES  ============================================== */
  /* ================================================================================================================= */
+
 
  ::selection {
      background-color: map-get($colorPalette, redbase);
@@ -229,7 +234,6 @@
          text-decoration: none;
      }
  }
-
 
  /* =====================================  ROTATING LOGO  ====================================== */
 
@@ -460,10 +464,8 @@
                      }
                  }
              }
-
          }
      }
-
  }
 
  /* ================================================  MEDIA QUERIES  =============================================== */
@@ -489,14 +491,14 @@
      }
  }
 
- @media only screen and (min-width: 993px) {
+ @media only screen and (min-width: 991px) {
      .navbar-collapse {
          display: flex;
          justify-content: flex-end;
      }
  }
 
- @media only screen and (max-width: 992px) {
+ @media only screen and (max-width: 991px) {
      .nav-link {
          letter-spacing: 8px;
 
@@ -507,7 +509,6 @@
          &::before {
              content: '==';
          }
-
      }
  }
 
@@ -515,6 +516,7 @@
  /* ================================================================================================================= */
  /* ===================================================  INDEX  ===================================================== */
  /* ================================================================================================================= */
+
 
  .VHSLoading {
      @include mixbackground(none, top);
@@ -618,9 +620,7 @@
 
  /* ================================================  MEDIA QUERIES  =============================================== */
 
-
  @media only screen and (max-width: 600px) {
-
      .imgIndex1 {
          background-image: url("https://i.imgur.com/qsFD3tR.jpg");
      }
@@ -628,12 +628,13 @@
      .imgIndex2 {
          background-image: url("https://i.imgur.com/S9NBccG.jpg");
      }
-
  }
+
 
  /* ================================================================================================================= */
  /* ==================================================  BAMD  ======================================================= */
  /* ================================================================================================================= */
+
 
  .whiteShadow {
      width: 100%;
@@ -788,7 +789,6 @@
      }
  }
 
-
  /* =============================================  DALLON  ===================================== */
 
  #cardDallon {
@@ -882,6 +882,7 @@
  /* ================================================================================================================= */
  /* ==============================================  DISCOGRAFIA  ==================================================== */
  /* ================================================================================================================= */
+
 
  .contentDisc {
      display: grid;
@@ -1002,7 +1003,6 @@
 
  /* ====================================  CHRISTMAS DRAG  ====================================== */
 
-
  .containerMult__cover--album3 {
      @include mixbackground(url("https://i.imgur.com/Rc7X0Em.jpg"))
  }
@@ -1040,7 +1040,6 @@
  .secalbum6 {
      grid-row: 7/8;
  }
-
 
  /* ================================================  MEDIA QUERIES  =============================================== */
 
@@ -1108,13 +1107,16 @@
  /* ===============================================  GALERIA  ======================================================= */
  /* ================================================================================================================= */
 
+
  .mainTitle {
      @extend .titleStyles;
  }
 
+
  /* ================================================================================================================= */
  /* ================================================  TOUR  ========================================================= */
  /* ================================================================================================================= */
+
 
  .tourHeaderBs {
      height: 500px;
@@ -1220,8 +1222,6 @@
                                  }
                              }
                          }
-
-
                      }
                  }
              }
@@ -1230,6 +1230,20 @@
  }
 
  /* ================================================  MEDIA QUERIES  =============================================== */
+
+ @media only screen and (max-width: 991px) {
+     .tourInfo {
+         border: transparent;
+
+         .tourInfo__links {
+             .tourInfo__links__btn {
+                 button {
+                     width: 250px;
+                 }
+             }
+         }
+     }
+ }
 
  @media only screen and (max-width: 800px) {
      .tourInfo {
@@ -1372,6 +1386,7 @@
  /* ===============================================  FOOTER  ======================================================== */
  /* ================================================================================================================= */
 
+
  footer {
      h3 {
          font-size: 14px;
@@ -1396,5 +1411,160 @@
          height: min-content;
          width: 50%;
          margin: auto;
+     }
+ }
+
+
+ /* ================================================================================================================= */
+ /* =================================================  404  ========================================================= */
+ /* ================================================================================================================= */
+
+
+ .container404 {
+     @include mixbackground(url("https://i.imgur.com/l5H9ngU.gif"));
+     height: 100vh;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     color: map-get($colorPalette, whitebase);
+
+     .content404 {
+         padding: 15%;
+
+         h1 {
+             border: none;
+             font-size: 80px;
+             font-weight: 900;
+             margin: 0;
+             animation-name: glitch404;
+             animation-duration: 2s;
+             animation-iteration-count: infinite;
+
+             @keyframes glitch404 {
+                 0% {
+                     text-align: start;
+                     font-family: VHSTitles;
+                     color: map-get($colorPalette, whitebase);
+                 }
+
+                 10% {
+                     text-align: end;
+                     font-family: VHSTitles;
+                 }
+
+                 11% {
+                     text-align: end;
+                     font-family: VHSTitles;
+                     color: map-get($colorPalette, whitebase);
+                 }
+
+                 12% {
+                     text-align: center;
+                     font-family: logoFont;
+                     color: map-get($colorPalette, redbase);
+                 }
+
+                 14% {
+                     text-align: end;
+                     font-family: inherit;
+                     font-family: VHSTitles;
+                     color: map-get($colorPalette, whitebase);
+                 }
+
+                 16% {
+                     text-align: start;
+                     font-family: logoFont;
+                     font-style: italic;
+                 }
+
+                 17% {
+                     text-align: start;
+                     font-family: VHSTitles;
+                     font-style: normal;
+                 }
+
+                 19% {
+                     text-align: start;
+                     font-style: italic;
+                 }
+
+                 20% {
+                     text-align: start;
+                     font-style: normal;
+                 }
+
+                 24% {
+                     text-align: start;
+                     font-weight: 100;
+                 }
+
+                 28% {
+                     text-align: start;
+                     font-weight: 900;
+                 }
+
+                 28% {
+                     text-align: start;
+                     font-style: oblique;
+                 }
+
+                 29% {
+                     text-align: start;
+                     font-style: normal;
+                 }
+
+                 30% {
+                     text-align: start;
+                     font-style: oblique;
+                     text-decoration: line-through;
+                 }
+
+                 31% {
+                     text-align: start;
+                     font-style: normal;
+                 }
+
+                 32% {
+                     text-align: start;
+                     font-style: oblique;
+                 }
+
+                 100% {
+                     text-align: start;
+                 }
+             }
+         }
+
+         p {
+             font-family: VHSTitles;
+         }
+
+         button {
+             height: min-content;
+             border: 2px solid map-get($colorPalette, blackbase);
+             @extend .shadowradius;
+             border-radius: 10px;
+             cursor: pointer;
+             transition: ease .20s all;
+             background-color: map-get($colorPalette, whitebase);
+             padding: 15px;
+             margin-top: 30px;
+
+             font: {
+                 family: VHSTitles;
+                 size: 20px;
+             }
+
+             &:hover {
+                 font-size: 21px;
+                 background-color: map-get($colorPalette, blackbase);
+
+                 a {
+                     color: map-get($colorPalette, whitebase);
+                 }
+             }
+
+             ;
+         }
      }
  }

@@ -26,10 +26,10 @@
     <!-- ====================================  CONTENIDO  ===================================== -->
 
     <main class="content404">
-        <div class="404">
-            <h1 class="404title">404</h1>
+        <div>
+            <h1>404</h1>
         </div>
-        <div class="404info">
+        <div>
             <p>Oh no! Parece que te perdiste en el tiempo, mejor volvamos al presente...</p>
         </div>
         <div class="404button d-flex justify-content-center align-items-center"><button><a href="./index.html">VOLVER AL

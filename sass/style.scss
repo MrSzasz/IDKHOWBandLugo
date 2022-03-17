@@ -1129,6 +1129,13 @@
      @include mixbackground(url("https://i.imgur.com/IOLgYTe.jpg"), top)
  }
 
+ .noTour {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     grid-column: 2/3;
+ }
+
  /* =========================================  LISTA  ========================================== */
 
  .align-items-center {

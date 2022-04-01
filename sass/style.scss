@@ -17,6 +17,7 @@
  $colorRazz-4: #302F31;
  $colorRazz-5: #E8E7D5;
  $colorBlackBase: #312F32;
+ $colorBlackBaseDisabled: #605b63;
 
 
  /* ================================================================================================================= */
@@ -25,6 +26,7 @@
 
 
  $colorPalette:(blackbase: #312F32,
+     blackbasedisabled: #605b63,
      whitebase: #E8E7D5,
      redbase: #EE2E2B,
  );
@@ -463,6 +465,48 @@
                          font-size: 14px;
                      }
                  }
+
+                 .tourLink {
+                     position: relative;
+                     cursor: default;
+                     transition: ease .20s all;
+
+                     &:hover {
+                         color: map-get($colorPalette, blackbase);
+                         transition: ease .20s all;
+
+                         &::after {
+                             transition: ease .20s all;
+                             position: absolute;
+                             top: 40px;
+                             left: 50%;
+                             transform: translateX(-50%);
+                             content: 'Sin fechas disponibles :c';
+                             height: min-content;
+                             width: max-content;
+                             padding: 10px;
+                             text-align: center;
+                             background-color: map-get($colorPalette, whitebase);
+                             border: map-get($colorPalette, blackbase) 2px solid;
+                             border-radius: 10px;
+                             @extend .shadowradius;
+
+                         }
+
+                         &::before {
+                             content: '';
+                             position: absolute;
+                             bottom: 2px;
+                             left: 50%;
+                             transform: translateX(-50%);
+                             width: 0;
+                             height: 0;
+                             border-left: 5px solid transparent;
+                             border-right: 5px solid transparent;
+                             border-bottom: map-get($colorPalette, blackbase) 8px solid;
+                         }
+                     }
+                 }
              }
          }
      }
@@ -508,6 +552,17 @@
 
          &::before {
              content: '==';
+         }
+     }
+
+     .tourLink {
+         &:hover {
+             margin-bottom: 100px;
+
+             &::after {
+                 letter-spacing: 1px;
+                 width: min-content !important;
+             }
          }
      }
  }
@@ -1424,6 +1479,10 @@
          height: min-content;
          width: 50%;
          margin: auto;
+
+         .tourFooter {
+             cursor: default;
+         }
      }
  }
 

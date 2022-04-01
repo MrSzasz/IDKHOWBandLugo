@@ -1,3 +1,30 @@
 {
-    "cSpell.language": "en,en-US,es,es-ES"
+    "cSpell.language": "en,en-US,es,es-ES",
+    "liveSassCompile.settings.includeItems": [
+    
+    ],
+    "liveSassCompile.settings.excludeList": [
+
+        "**/node_modules/**",
+        ".vscode/**"
+    ],
+    "sass.andStared": [
+
+        "active",
+        "focus",
+        "hover",
+        "nth-child"
+    ],
+    "liveSassCompile.settings.autoprefix": [
+    
+    ],
+    "liveSassCompile.settings.formats": [
+
+
+        {
+            "format": "expanded",
+            "extensionName": ".css",
+            "savePath": "/css"
+        }
+    ]
 }
